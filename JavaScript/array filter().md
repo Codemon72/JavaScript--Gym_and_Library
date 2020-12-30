@@ -15,3 +15,5 @@ The filter() method creates an array filled with all array elements that pass a 
 **Note**: filter() does not execute the function for array elements without values.
 
 **Note**: filter() does not change the original array.
+
+for more bits and bobs check w3schools: https://www.w3schools.com/jsref/jsref_filter.asp
