@@ -1,6 +1,22 @@
 #### The `Number` Object
 
-the Number objects have five attributes (or called constant):
+The number is a basic data type in JavaScript. JavaScript also supports Number objects. The object is the original value of the package object. When necessary, JavaScript automatically converts between the original data and the objects. You can explicitly create a Number object with the constructor `Number()`. Although it is not necessary to do so. Usage:
+
+```
+var num=new Number(value);
+```
+
+Parameter value is the value of the Number object to be created or the value to be converted into a numeric value.
+
+Constructor `Number()` can be used without operator `new` and directly as a transformation function to use. In this way, when the Number is called, it transforms itself into a number and then returns the converted value (or NaN). Usage:
+
+```
+var num=Number(value);
+```
+
+Number object has two generic object properties: constructor and prototype. all the objects in JS have these two properties. They are 2 very important attributes. Because of their importance and complexity, we will learn it in the future.
+
+#### properties of the Number object
 
 MAX_VALUE: The maximum number that can be expressed in JS. Usage: `Number.MAX_VALUE`. Its approximate value is 1.7976931348623157e+308
 
@@ -14,4 +30,21 @@ NEGATIVE_INFINITY: The value represents the negative infinity. Usage: `Number.NE
 
 POSITIVE_INFINITY: The value represents the positive infinity. Usage: `Number.POSITIVE_INFINITY`. When a number is generated in an arithmetic operation or function and it larger than Number.MAX_VALUE return this value. It can be simplified and replaced with Infinity.
 
-source: Codewars - https://www.codewars.com/kata/5722fd3ab7162a3a4500031f
+sources: 
+- Codewars - https://www.codewars.com/kata/5722fd3ab7162a3a4500031f
+- w3schools - good overview of properties and methods - https://www.w3schools.com/jsref/jsref_obj_number.asp
+
+#### How to test for it
+
+```
+const whatNumberIsIt = (n) => {
+  switch(true){
+      case (n == Number.MAX_VALUE): return "Input number is Number.MAX_VALUE";
+      case (n == Number.MIN_VALUE): return "Input number is Number.MIN_VALUE";
+      case (isNaN(n)): return "Input number is Number.NaN";
+      case (n == Number.NEGATIVE_INFINITY): return "Input number is Number.NEGATIVE_INFINITY";
+      case (n == Number.POSITIVE_INFINITY): return "Input number is Number.POSITIVE_INFINITY";
+      default: return `Input number is ${n}`;
+  };
+};
+```
