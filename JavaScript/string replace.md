@@ -1,6 +1,6 @@
 Method: replace()
 
-`replace()` can replace the text specified(parameter 1) in the string with parameter 2. 
+`replace()` can replace the text specified (parameter 1) in the string with parameter 2. 
 
 ```js
 let str = "this is an example.";
