@@ -19,6 +19,7 @@ Parameters:
 
 - If start is negative or larger than the length of the string, start is set to 0
 
-**length**	Optional. The number of characters to extract. If omitted, it extracts the rest of the string
+**length**	
+- Optional. The number of characters to extract. If omitted, it extracts the rest of the string
 
 **Return Value**:	A new String, containing the extracted part of the text. If length is 0 or negative, an empty string is returned
