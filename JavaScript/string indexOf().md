@@ -4,7 +4,7 @@ This method returns -1 if the value to search for never occurs.
 
 **Note**: The indexOf() method is case sensitive.
 
-**Tip**: Also look at the lastIndexOf() method.
+**Tip**: Also look at the lastIndexOf() and search() method.
 
 #### Syntax
 
