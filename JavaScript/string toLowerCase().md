@@ -12,4 +12,15 @@ The toLowerCase() method converts a string to lowercase letters.
 
 **Return Value**:	A String, representing the value of a string converted to lowercase
 
+
+**Example**
+
+```
+let str = "Hello World!";
+let res = str.toLowerCase();
+console.log(res);
+// output: hello world!
+```
+
+
 source: https://www.w3schools.com/jsref/jsref_tolowercase.asp
