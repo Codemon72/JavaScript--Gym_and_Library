@@ -1,0 +1,1 @@
+join 2 or more strings, return new joined string
