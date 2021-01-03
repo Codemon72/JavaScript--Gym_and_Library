@@ -15,17 +15,12 @@
     const separator = " ";
 
     const splitAndMerge = (string, separator) => {
-      //split the string into words by spaces
-      const wordsArray = string.split(" ");
-      console.log(wordsArray);
-      // split each word into separate characters
-      const lettersArray = wordsArray.map(word => word.split(""));
-      console.log(lettersArray);
-      //join them back with the specified separator
-      const newWordsArray = lettersArray.map(word => word.join(separator));
-      console.log(newWordsArray);
-      //join all the resulting "words" back into a sentence with spaces
-      console.log(newWordsArray.join(" "));
+      function alienLanguage(str) {
+        // capitalize all letters
+        const upperCaseString = str.toUpperCase();
+        // turn last letter to lower case
+
+      }
     }
 
     splitAndMerge(string, separator)
