@@ -37,7 +37,17 @@ Perform a **global** replacement:
 var str = "Mr Blue has a blue house and a blue car";
 var res = str.replace(/blue/g, "red");
 
-// output: 
+// output: Mr Blue has a red house and a red car.
+```
+
+Perform a **global, case-insensitive** replacement:
+```
+var str = "Mr Blue has a blue house and a blue car";
+var res = str.replace(/blue/gi, "red");
+
+// output: Mr red has a red house and a red car.
+```
+
 
 
 source: https://www.w3schools.com/jsref/jsref_replace.asp
