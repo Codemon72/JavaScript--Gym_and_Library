@@ -6,7 +6,7 @@ This method does not change the existing strings, but returns a new string conta
 
 **Note**: we rarely see the actual use of concat(), because we have a more simple way: using the + operator.
 
-**Tip**: Probably better: the join() method.
+**Tip**: Probably better: the (array) join() method.
 
 #### Syntax
 
