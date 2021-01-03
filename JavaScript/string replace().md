@@ -21,12 +21,23 @@ Parameters
 - searchvalue	- Required. The value, or regular expression, that will be replaced by the new value
 - newvalue -	Required. The value to replace the search value with
 
-**Example**:
+**Examples**:
 
 ```js
 let str = "this is an example.";
 var result = str.replace("this", "that");
 console.log(result);
 
-//output: that is an example.
+// output: that is an example.
 ```
+
+Perform a **global** replacement:
+
+```
+var str = "Mr Blue has a blue house and a blue car";
+var res = str.replace(/blue/g, "red");
+
+// output: 
+
+
+source: https://www.w3schools.com/jsref/jsref_replace.asp
