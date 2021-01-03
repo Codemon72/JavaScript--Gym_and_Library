@@ -19,6 +19,7 @@ The toLowerCase() method converts a string to lowercase letters.
 let str = "Hello World!";
 let res = str.toLowerCase();
 console.log(res);
+
 // output: hello world!
 ```
 
