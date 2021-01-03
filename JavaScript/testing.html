@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  
+
 
   <script>
-    let str = 'a';
-    console.log(str); 
-    str = str + '*'
-    console.log(str); 
+    const string = "My name is John";
+    const separator = " ";
+
+    const splitAndMerge = (string, separator) => {
+      //split the string into words by spaces
+      const wordsArray = string.split(" ");
+      console.log(wordsArray);
+      // split each word into separate characters
+      const lettersArray = wordsArray.map(word => word.split(""));
+      console.log(lettersArray);
+      //join them back with the specified separator
+      const newWordsArray = lettersArray.map(word => word.join(separator));
+      console.log(newWordsArray);
+      //join all the resulting "words" back into a sentence with spaces
+      console.log(newWordsArray.join(" "));
+    }
+
+    splitAndMerge(string, separator)
   </script>
 </body>
+
 </html>
