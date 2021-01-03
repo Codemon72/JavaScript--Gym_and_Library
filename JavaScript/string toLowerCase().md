@@ -10,6 +10,8 @@ The toLowerCase() method converts a string to lowercase letters.
 
 `string.toLowerCase()`
 
+Parameters: none
+
 **Return Value**:	A String, representing the value of a string converted to lowercase
 
 
