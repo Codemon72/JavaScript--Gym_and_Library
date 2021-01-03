@@ -14,4 +14,15 @@ Parameters: none
 
 **Return Value**:	A String, representing the value of a string converted to uppercase
 
+
+**Example**
+
+```
+let str = "Hello World!";
+let res = str.toUpperCase();
+console.log(res);
+
+// output: HELLO WORLD!
+```
+
 source: https://www.w3schools.com/jsref/jsref_touppercase.asp
