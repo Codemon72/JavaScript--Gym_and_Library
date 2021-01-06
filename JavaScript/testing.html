@@ -11,24 +11,25 @@
 
 
   <script>
-      function alienLanguage(str) {
-        // capitalize all letters
-        const upperCaseString = str.toUpperCase();
-        console.log(upperCaseString);
-        // separate into smaller strings  
-        const wordArray = upperCaseString.split(" ");
-        console.log(wordArray);
-        // turn last letter to lower case
-        for(let i = 0; i < wordArray.length; i++){
-          const index = wordArray[i].length -1;
-          wordArray[i] = wordArray[i].slice(0, index) + wordArray[i][index].replace(wordArray[i][index], wordArray[i][index].toLowerCase())
-        }
-        console.log(wordArray);
-        // const arrayWithLowerCaseEndings = wordArray.map(function(currentValue, index, arr)))
-      }
+      // character "A" after decryption should be "X" instead of ">"
+      // character "B" after decryption should be "Y" instead of "?"
+      // character "C" after decryption should be "Z" instead of "@"
+      // character "a" after decryption should be "x" instead of "^"
+      // character "b" after decryption should be "y" instead of "_"
+      // character "c" after decryption should be "z" instead of "`"
+
+      const string = "abcdefgxyz";
+      const stringX = "ABCDEFGXYZ";
+
+      const decode = (str) => {
 
 
-      alienLanguage("My name is Maha Yuga!")
+        return 
+      };
+
+      console.log(decode(string))
+      console.log(decode(stringX))
+
   </script>
 </body>
 
