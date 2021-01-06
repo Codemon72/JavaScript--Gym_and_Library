@@ -18,7 +18,7 @@
     // character "b" after decryption should be "y" instead of "_"
     // character "c" after decryption should be "z" instead of "`"
 
-    const string = "abcdefghijklmnopqrstuvwxyz";
+    const string = "abcdefghijklmnopqrstuvwxyz!";
     const stringX = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     const decode = (str) => {
@@ -41,7 +41,7 @@
     console.log(encode(string));
     console.log(encode(stringX));
 
-    const testA = "Pb qdph lv Mrkq";
+    const testA = "Pb qdph lv Mrkq!";
 
     const topSecret = (str) => {
       let wordsArray = str.split(" ");
@@ -50,14 +50,19 @@
       let myFunction = (word) => {
         let newWord = "";
         for (let i = 0; i < word.length; i++) {
-          let temp = word[i].charCodeAt() - 3;
-          if (temp == "96") temp = "122";
-          if (temp == "95") temp = "121";
-          if (temp == "94") temp = "120";
-          if (temp == "64") temp = "90";
-          if (temp == "63") temp = "89";
-          if (temp == "62") temp = "87";
-          newWord += String.fromCharCode(temp);
+          if (word[i].charCodeAt() >= 64){
+            let temp = word[i].charCodeAt() - 3;
+            if (temp == "96") temp = "122";
+            if (temp == "95") temp = "121";
+            if (temp == "94") temp = "120";
+            if (temp == "64") temp = "90";
+            if (temp == "63") temp = "89";
+            if (temp == "62") temp = "87";
+            newWord += String.fromCharCode(temp);
+          } else {
+            let temp = word[i].charCodeAt();
+            newWord += String.fromCharCode(temp);
+          }
         }
         return newWord;
       }
