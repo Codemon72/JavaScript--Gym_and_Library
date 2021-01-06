@@ -11,24 +11,63 @@
 
 
   <script>
-      // character "A" after decryption should be "X" instead of ">"
-      // character "B" after decryption should be "Y" instead of "?"
-      // character "C" after decryption should be "Z" instead of "@"
-      // character "a" after decryption should be "x" instead of "^"
-      // character "b" after decryption should be "y" instead of "_"
-      // character "c" after decryption should be "z" instead of "`"
+    // character "A" after decryption should be "X" instead of ">"
+    // character "B" after decryption should be "Y" instead of "?"
+    // character "C" after decryption should be "Z" instead of "@"
+    // character "a" after decryption should be "x" instead of "^"
+    // character "b" after decryption should be "y" instead of "_"
+    // character "c" after decryption should be "z" instead of "`"
 
-      const string = "abcdefgxyz";
-      const stringX = "ABCDEFGXYZ";
+    const string = "abcdefghijklmnopqrstuvwxyz";
+    const stringX = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-      const decode = (str) => {
+    const decode = (str) => {
+      let chars = str.split("");
+      for (let i = 0; i < chars.length; i++)
+        chars[i] = String.fromCharCode(chars[i].charCodeAt() - 3);
+      return chars.join("");
+    };
 
+    const encode = (str) => {
+      let array = []
+      for (let i = 0; i < str.length; i++) {
+        array.push(str.charCodeAt(i))
+      }
+      return array;
+    }
 
-        return 
-      };
+    console.log(decode(string));
+    console.log(decode(stringX));
+    console.log(encode(string));
+    console.log(encode(stringX));
 
-      console.log(decode(string))
-      console.log(decode(stringX))
+    const testA = "Pb qdph lv Mrkq";
+
+    const topSecret = (str) => {
+      let wordsArray = str.split(" ");
+      console.log(wordsArray)
+
+      let myFunction = (word) => {
+        let newWord = "";
+        for (let i = 0; i < word.length; i++) {
+          let temp = word[i].charCodeAt() - 3;
+          if (temp == "96") temp = "122";
+          if (temp == "95") temp = "121";
+          if (temp == "94") temp = "120";
+          if (temp == "64") temp = "90";
+          if (temp == "63") temp = "89";
+          if (temp == "62") temp = "87";
+          newWord += String.fromCharCode(temp);
+        }
+        return newWord;
+      }
+      
+      let newWordsArray = wordsArray.map(myFunction);
+      // console.log(newWordsArray);
+      return newWordsArray.join(" ");
+    };
+
+    console.log(topSecret(testA));
 
   </script>
 </body>
