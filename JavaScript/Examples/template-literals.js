@@ -22,4 +22,14 @@ not ${2 * a1 + b1}.`);
 // not 20."
 
 
+function plus(a,b){
+  console.log(`${a} + ${b} = ${a+b}`);
+}
+plus(1,2);
+plus(3,4);
+
+//output:
+// 1 + 2 = 3
+// 3 + 4 = 7
+
 // source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
