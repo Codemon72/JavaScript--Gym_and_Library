@@ -48,13 +48,23 @@ let s1 = " a";
 let s2 = "\txy \n";
 let s3 = "           Ok               ";
 
+// const fiveLine = (s) => {
+//   let fiveLog = "";
+//   for (let i = 1; i <= 5; i++){
+//     for (let j = 1; j <= i; j++){
+//       fiveLog += `${s.trim()}`
+//     }
+//     fiveLog += `\n`
+//   }
+//   return fiveLog;
+// }
+
 const fiveLine = (s) => {
+  let trimmedString = s.trim();
   let fiveLog = "";
   for (let i = 1; i <= 5; i++){
-    for (let j = 1; j <= i; j++){
-      fiveLog += `${s.trim()}`
-    }
-    fiveLog += `\n`
+    fiveLog += trimmedString.repeat(i);
+    if(i < 5){fiveLog += `\n`};
   }
   return fiveLog;
 }
