@@ -51,9 +51,12 @@ let s3 = "           Ok               ";
 const fiveLine = (s) => {
   let fiveLog = "";
   for (let i = 1; i <= 5; i++){
-    fiveLog += `${s.trim()}\n` 
+    for (let j = 1; j <= i; j++){
+      fiveLog += `${s.trim()}`
+    }
+    fiveLog += `\n`
   }
   return fiveLog;
 }
 
-console.log(fiveLine(s1));
+console.log(fiveLine(s3));
