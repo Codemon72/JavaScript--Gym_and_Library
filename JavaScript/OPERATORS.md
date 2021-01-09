@@ -18,6 +18,9 @@ source: https://www.w3schools.com/jsref/jsref_operators.asp
 
 #### Spread Operator
 
+The spread operator allows an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) are expected.
+
+
 ##### Object Spreading
 When we want to make a copy of an object we run into a problem if we simply use the assignment operator =. 
 ```
