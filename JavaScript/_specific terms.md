@@ -10,6 +10,8 @@ Regular expressions are used to perform pattern-matching and "search-and-replace
 
 `/pattern/modifiers;`
 
+It's used in the (string) replace() method.
+
 #### Method
 
 A method is a function stored as a property (in an object).
