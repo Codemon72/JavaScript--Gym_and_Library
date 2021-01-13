@@ -166,3 +166,5 @@ sources:
 - Hamburg Coding School Handout "JavaScript for Web"
 - well explained and referencing **shallow and deep copy**: https://livecodestream.dev/post/how-to-use-the-spread-operator-in-javascript/
 - further reading on how to make a deep copy: https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089
+
+
