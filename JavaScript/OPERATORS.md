@@ -48,6 +48,8 @@ console.log(`${person2.name} is ${person2.age} years old.`)
 // prints: Nina is 28 years old.
 ```
 
+
+
 ##### Array Spreading
 The spread operator works on arrays just as well and makes it very easy to merge to arrays into a new one:
 
@@ -58,10 +60,27 @@ const allValues = [...values1, ...values2]
 // [1, 2, 3, 4, 5, 6]
 ```
 
+or 
+
+```
+function plus(a,b,c,d,e){
+  return a+b+c+d+e;
+}
+var arg1=[1,2,3,4,5];
+var arg2=[2,3];
+console.log(plus(...arg1));
+console.log(plus(1,...arg2,4,5));
+
+// output:
+// 15
+// 15
+```
+
+
 This is used less often as there is also the concat() method that will do the same:
 const allValues = values1.concat(values2)
 
-**Careful!**: This only makes a shallow copy. 
+**Careful!**: This only makes a **shallow copy**. 
 
 **What is a shallow copy?**
 Making a shallow copy of an array or object means creating new references to the primitive values inside the object, copying them.
@@ -69,6 +88,79 @@ That means that changes to the original array will not affect the copied array, 
 A shallow copy refers to the fact that only one level is copied, and that will work fine for an array or object containing only primitive values.
 For objects and arrays containing other objects or arrays, copying these objects requires a deep copy. Otherwise, changes made to the nested references will change the data nested in the original object or array.
 In this [article](https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089), I describe 4 methods of making a shallow copy and then 5 methods of making a deep copy in JavaScript.
+
+
+#### Destructuring
+
+simple example:
+```
+var [a,b]=[1,2];   //the old method is var a=1,b=2;
+console.log(a);
+console.log(b);
+
+// output:
+// 1
+// 2
+```
+
+Destructuring allows us to assign variables in a sentence-like form. 
+Here's a slightly more complicated example:
+
+```
+var [a,b]=[1,2]
+//Exchange the values of the two variables
+//classic method:
+var c=a;    //defined c to help us
+a=b;
+b=c;
+//deconstruction method:
+var [a,b]=[1,2];
+[b,a]=[a,b];
+console.log(a);
+console.log(b);
+
+// output:
+// 2
+// 1
+```
+
+You can use the spread operator for destructuring like this:
+
+```
+var [a,...b]=[1,2,3,4,5];
+console.log(a);
+console.log(b);
+
+// output:
+// 1
+// [ 2, 3, 4, 5 ]
+```
+**Please note**: the spread operator must be the last variable: [...a,b]=[1,2,3,4,5] does not work.
+a was assigned to the first element of the array, and b was initialized with the remaining elements in the array.
+
+#### Rest Parameter
+
+**Javascript note**: If you see an ellipse ... in the argument list in a function declaration, it is not a spread operator, it is a structure called rest parameters. The rest parameter syntax allows us to represent an indefinite number of arguments as an array, like this: 
+
+```
+function plus(...num){
+  var rs=0
+  for (x of num) rs+=x;
+  return rs;
+}
+console.log(plus(1,2));
+console.log(plus(3,4,5));
+
+// output:
+// 3
+// 12
+```
+
+**Note**: The rest paramater must be the last argument in the function definition argument list.
+
+
+
+
 
 sources: 
 - Hamburg Coding School Handout "JavaScript for Web"
