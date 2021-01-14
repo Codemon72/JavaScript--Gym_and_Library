@@ -144,8 +144,8 @@ a was assigned to the first element of the array, and b was initialized with the
 
 ```
 function plus(...num){
-  var rs=0
-  for (x of num) rs+=x;
+  var rs = 0
+  for (x of num) rs += x;
   return rs;
 }
 console.log(plus(1,2));
@@ -157,6 +157,23 @@ console.log(plus(3,4,5));
 ```
 
 **Note**: The rest paramater must be the last argument in the function definition argument list.
+
+In the next example, we use a rest parameter to collect all the values passed to mul() after the first into an array. We then multiply each of them by the first parameter and return that array:
+
+```
+function mul(a,...b){
+  for (let i=0; i < b.length; i++) b[i]*=a;
+  return b;
+}
+console.log(mul(2,1,1,1));
+console.log(mul(2,1,2,3,4));
+
+// output:
+// [2,2,2]
+// [2,4,6,8]
+```
+
+--- 
 
 
 

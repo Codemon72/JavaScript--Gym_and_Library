@@ -5,10 +5,10 @@
 // For every such array, swap the elements. Try to use all your new skills: arrow functions, the spread operator, destructuring, and rest parameters.
 
 
-
-const shuffleIt = (arr,?) => {
+const shuffleIt = (arr, ?) => {
 
 };
+
 
 console.log(shuffleIt([1,2,3,4,5],[1,2]) , [1,3,2,4,5]);
 
