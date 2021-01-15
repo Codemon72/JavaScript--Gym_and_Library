@@ -5,16 +5,14 @@
 // For every such array, swap the elements. Try to use all your new skills: arrow functions, the spread operator, destructuring, and rest parameters.
 
 const shuffleIt = (arr, ...xArrays) => {
-  console.log(arr[xArrays[0][0]]);
-  // for (let i = 0; i <= xArrays.length; i++){
-  //   console.log(arr[xArrays[i][0]]);
-  //   let temp = arr[xArrays[i][0]];
-  //   arr[xArrays[i][0]] = arr[xArrays[i][1]];
-  //   arr[xArrays[i][1]] = temp;
-  // }
-  let temp = arr[xArrays[0][0]];
-  arr[xArrays[0][0]] = arr[xArrays[0][1]];
-  arr[xArrays[0][1]] = temp;
+  for (let i = 0; i <= xArrays.length; i++){
+    let temp = arr[xArrays[i][0]];
+    arr[xArrays[i][0]] = arr[xArrays[i][1]];
+    arr[xArrays[i][1]] = temp;
+  }
+  // let temp = arr[xArrays[0][0]];
+  // arr[xArrays[0][0]] = arr[xArrays[0][1]];
+  // arr[xArrays[0][1]] = temp;
   return arr;
 };
 
