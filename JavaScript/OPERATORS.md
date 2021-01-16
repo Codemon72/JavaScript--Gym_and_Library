@@ -173,6 +173,8 @@ console.log(mul(2,1,2,3,4));
 // [2,4,6,8]
 ```
 
+Spread separates the values of an iterable and is used inside function calls and Array literals, while rest gathers individual values into an array and is used for rest parameters and destructuring.
+
 --- 
 
 
