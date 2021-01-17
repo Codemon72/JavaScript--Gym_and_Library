@@ -20,7 +20,7 @@ Parameters
     (Note: In IE8, it won't delete all when deleteCount is omitted.)
     If deleteCount is 0 or negative, no elements are removed. In this case, you should specify at least one new element (see below).
 - item1, ..., itemX - Optional
-    The elements to add to the array, beginning from start. If you do not specify any elements, splice() will only remove elements from the array.
+    The elements to add to the array (after the removal), beginning from start. If you do not specify any elements, splice() will only remove elements from the array.
 
 **Return Value**:	A new Array, containing the removed items (if any).
 
