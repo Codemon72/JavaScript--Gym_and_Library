@@ -1,4 +1,3 @@
-``` 
 const colorOf = (r,g,b) => {
    return "#" + toHex(r)+ toHex(g)+ toHex(b);  
 };
@@ -9,4 +8,3 @@ const toHex = (n) => {
     ? "0" + result 
     : result;  
 }
-```
