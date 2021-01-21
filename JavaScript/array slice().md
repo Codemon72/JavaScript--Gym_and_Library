@@ -1,4 +1,4 @@
-select part of an array, return the new array
+select part of an array and return as a new array
 
 The slice() method returns the selected elements in an array, as a new array object.
 
