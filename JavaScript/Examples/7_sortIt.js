@@ -16,7 +16,7 @@
 const sortIt = (arr) => {
   const newArray = [...arr];
   newArray.sort((a, b) => {return b - a});
-  console.log(newArray);
+  // console.log(newArray);
 
   // make one array for each number
   const arrOfArrs = []
@@ -27,15 +27,17 @@ const sortIt = (arr) => {
       arrOfArrs.push(sameNumber);
       sameNumber = [];
     }
-    console.log(arrOfArrs)
+    // console.log(arrOfArrs)
   }
   return arrOfArrs;
   // sort them by value and length
+  
+
   // concat() them
 
 };
 
 
 // console.log((sortIt([1,1,1,2,2,3]))) // expected: [3,2,2,1,1,1]);
-console.log((sortIt([1,1,1,2,2,2,3,3,3]))) // expected: [3,3,3,2,2,2,1,1,1]);
-// console.log((sortIt([1,2,3,4,4,5,5,6,6]))) // expected: [3,2,1,6,6,5,5,4,4]);
+// console.log((sortIt([1,1,1,2,2,2,3,3,3]))) // expected: [3,3,3,2,2,2,1,1,1]);
+console.log((sortIt([1,2,3,4,4,5,5,6,6]))) // expected: [3,2,1,6,6,5,5,4,4]);
