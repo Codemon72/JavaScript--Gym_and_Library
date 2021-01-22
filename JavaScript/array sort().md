@@ -34,4 +34,19 @@ When the sort() method compares two values, it sends the values to the compare f
 
 **Return Value**:	The Array object, with the items sorted
 
+More complex:
+If we need to sort by two or more conditions, we need to spend more energy to write a proper comparison function. The following example has two sorting conditions, first according to the classification of odd and even order, and then follow the numbers in ascending order.
+
+```
+const arr=[1,2,3,4,5,6,100,999]
+arr.sort((a, b) => {
+  if (a%2 == b%2) return a-b;
+  if (a%2 > b%2) return -1;
+  return 1;
+});
+console.log(arr);
+
+// output: [ 1, 3, 5, 999, 2, 4, 6, 100 ]
+```
+
 source: https://www.w3schools.com/jsref/jsref_sort.asp
