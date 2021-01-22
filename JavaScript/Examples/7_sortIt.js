@@ -16,9 +16,9 @@
 const sortIt = (arr) => {
   const newArray = [...arr];
   return newArray.sort((a, b) => {return b - a});
-  // make on array for each number
+  // make one array for each number
   // sort them by value and length
-  // 
+  // concat() them
 
 };
 
