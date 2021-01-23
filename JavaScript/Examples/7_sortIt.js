@@ -18,7 +18,6 @@ const sortIt = (arr) => {
   newArray.sort((a, b) => {
     return b - a;
   });
-  // console.log(newArray);
 
   // make one array for each number
   const arrOfArrs = [];
@@ -33,35 +32,21 @@ const sortIt = (arr) => {
 
   // sort them by value and length
   const sortedByLength = [];
-  let counter = 0;
+  let counter = 1;
   
-  while (arrOfArrs.length > 0 && counter < 10) {
-    console.log("counter: " + counter);
-    // console.log("arrOfArrs.length: " + arrOfArrs.length);
-    // console.log(arrOfArrs);
-    // console.log("sortedByLength: " + sortedByLength);
-
-    // for (let k = 0; k < arrOfArrs.length; k++) {
-    //   if (arrOfArrs[k].length == counter + 1) {
-    //     sortedByLength.push(arrOfArrs.splice(k, 1));
-    //     k = -1;
-    //   } 
-    // }
-
-    let counterTwo = 0;
-    if (arrOfArrs[counterTwo].length == 1){
-      sortedByLength.push(arrOfArrs.splice(k, 1));
-    }
-
-
+  while (arr.length !== sortedByLength.length){
+    arrOfArrs.forEach(x =>{
+      if (x.length == counter){
+        sortedByLength.push(...x)
+      }
+    })
     counter++;
-    // console.log("------");
   }
   return sortedByLength;
-
-  // concat() them
 };
 
-// console.log((sortIt([1,1,1,2,2,3]))) // expected: [3,2,2,1,1,1]);
-// console.log((sortIt([1,1,1,2,2,2,3,3,3]))) // expected: [3,3,3,2,2,2,1,1,1]);
+console.log((sortIt([1,1,1,2,2,3]))) // expected: [3,2,2,1,1,1]);
+console.log((sortIt([1,1,1,2,2,2,3,3,3]))) // expected: [3,3,3,2,2,2,1,1,1]);
 console.log(sortIt([1, 2, 3, 4, 4, 5, 5, 6, 6])); // expected: [3,2,1,6,6,5,5,4,4]);
+
+// apparently this kata can be solved with one or very few lines: https://www.codewars.com/kata/572df796914b5ba27c000c90/discuss/javascript
