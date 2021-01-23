@@ -29,24 +29,33 @@ const sortIt = (arr) => {
       arrOfArrs.push(sameNumber);
       sameNumber = [];
     }
-    // console.log(arrOfArrs)
   }
 
   // sort them by value and length
   const sortedByLength = [];
-  // let counter = 0;
-  // console.log(arrOfArrs.length);
-  // console.log(arrOfArrs);
-  for (i = 0; arrOfArrs.length > 0; i++){
-    console.log('i: ' + i);
-    console.log('arrOfArrs.length: ' + arrOfArrs.length);
-    console.log(arrOfArrs);
-    console.log('sortedByLength: ' + sortedByLength);
+  let counter = 0;
+  
+  while (arrOfArrs.length > 0 && counter < 10) {
+    console.log("counter: " + counter);
+    // console.log("arrOfArrs.length: " + arrOfArrs.length);
+    // console.log(arrOfArrs);
+    // console.log("sortedByLength: " + sortedByLength);
 
-    if (arrOfArrs[i].length == i + 1){
-      sortedByLength.push(arrOfArrs.splice(i, 1));
-      i = 0;
+    // for (let k = 0; k < arrOfArrs.length; k++) {
+    //   if (arrOfArrs[k].length == counter + 1) {
+    //     sortedByLength.push(arrOfArrs.splice(k, 1));
+    //     k = -1;
+    //   } 
+    // }
+
+    let counterTwo = 0;
+    if (arrOfArrs[counterTwo].length == 1){
+      sortedByLength.push(arrOfArrs.splice(k, 1));
     }
+
+
+    counter++;
+    // console.log("------");
   }
   return sortedByLength;
 
