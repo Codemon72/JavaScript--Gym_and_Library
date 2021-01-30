@@ -14,11 +14,26 @@
 
 
 
-const countGrade = (scores) {
-
+const countGrade = (scores) => {
+  const gradedScores = {
+    S: 0,
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0,
+    X: 0
+  }
+  scores.map( x => {
+    if (x === 100){ gradedScores.S += 1 }
+    if (100 > x >= 90){ gradedScores.A += 1 }
+    else { gradedScores.B += 1 }
+  })
+  return gradedScores
 };
 
 
-console.log(countGrade([50,60,70,80,90,100])); // expected outcome: {S:1, A:1, B:1, C:2, D:1, X:0});
-console.log(countGrade([65,75,,85,85,95,100,100])); // expected outcome: {S:2, A:1, B:2, C:2, D:0, X:0});
-console.log(countGrade([-1,-1,-1,-1,-1,-1])); // expected outcome: {S:0, A:0, B:0, C:0, D:0, X:6});
+// console.log(countGrade([50,60,70,80,90,100])); // expected outcome: {S:1, A:1, B:1, C:2, D:1, X:0});
+// console.log(countGrade([65,75,,85,85,95,100,100])); // expected outcome: {S:2, A:1, B:2, C:2, D:0, X:0});
+// console.log(countGrade([-1,-1,-1,-1,-1,-1])); // expected outcome: {S:0, A:0, B:0, C:0, D:0, X:6});
+
+console.log(countGrade([100, 95, 75]));
