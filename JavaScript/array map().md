@@ -1,4 +1,4 @@
-call the provided function once for each element in an array
+call the provided function once for each element in an array and return new array with the results
 
 The map() method creates a new array with the results of calling a function for every array element.
 
