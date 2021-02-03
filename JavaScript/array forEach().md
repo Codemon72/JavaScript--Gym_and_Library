@@ -1,4 +1,4 @@
-calls a function once for each element in an array, in order
+calls a function once for each element in an array, returns undefined
 
 **Note**: the function is not executed for array elements without values.
 
