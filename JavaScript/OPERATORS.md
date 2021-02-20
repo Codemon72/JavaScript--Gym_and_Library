@@ -91,6 +91,7 @@ In this [article](https://medium.com/javascript-in-plain-english/how-to-deep-cop
 
 
 #### Destructuring
+deep dive: https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
 
 simple example:
 ```
