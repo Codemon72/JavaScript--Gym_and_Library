@@ -95,7 +95,7 @@ deep dive: https://www.freecodecamp.org/news/javascript-object-destructuring-spr
 
 simple example:
 ```
-var [a,b]=[1,2];   //the old method is var a=1,b=2;
+const [a, b] = [1, 2];   // the old method is var a=1, b=2;
 console.log(a);
 console.log(b);
 
