@@ -2,7 +2,7 @@ converts an object's value to a string
 
 The String() function converts the value of an object to a string.
 
-Note: The String() function returns the same value as toString() of the individual objects.
+**Note**: The String() function returns the same value as toString() of the individual objects.
 
 
 ### Syntax
