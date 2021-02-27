@@ -2,7 +2,7 @@ The Console object provides access to the browser's debugging console.
 
 Methods worth trying out:
 ```js
-// log an object in table format
+// log tabular data as a table
 console.table();
 
 // log in red and where it is
