@@ -4,7 +4,8 @@ Basically there are 2 data types:
 - **Primitive Data Types**
   - stored directly in the location the variable accesses
   - stored on the stack
-  - String, Number, Boolean, Null (intentional empty value), Undefined (variable that has not been assigned a value), Symbols (ES6)
+  - string, number, boolean, null (intentional empty value), undefined (variable that has not been assigned a value), Symbols (ES6)
+  - Note: `typeof Null` will return: 'Object' but this is basically a bug in JavaScript. Google it.
 - **Reference Data Types / Objects**
   - accessed by reference
   - objects that are store on the heap
