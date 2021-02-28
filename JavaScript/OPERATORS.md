@@ -1,3 +1,5 @@
+https://www.w3schools.com/jsref/jsref_operators.asp
+
 #### Arithmetic Operators
 
 #### Assignment Operators
@@ -13,8 +15,6 @@
 #### Logical Operators
 
 `&&`, `||` and `!` // 'and', 'or' and 'not'
-
-source: https://www.w3schools.com/jsref/jsref_operators.asp
 
 #### Spread Operator
 
@@ -47,8 +47,6 @@ console.log(`${person.name} is ${person.age} years old.`)
 console.log(`${person2.name} is ${person2.age} years old.`)
 // prints: Nina is 28 years old.
 ```
-
-
 
 ##### Array Spreading
 The spread operator works on arrays just as well and makes it very easy to merge to arrays into a new one:
@@ -175,6 +173,50 @@ console.log(mul(2,1,2,3,4));
 ```
 
 Spread separates the values of an iterable and is used inside function calls and Array literals, while rest gathers individual values into an array and is used for rest parameters and destructuring.
+
+
+#### Type Operators
+`typeof`	Returns the type of a variable
+```js
+typeof "John"                 // Returns "string"
+typeof 3.14                   // Returns "number"
+typeof NaN                    // Returns "number"
+typeof false                  // Returns "boolean"
+typeof [1,2,3,4]              // Returns "object"
+typeof {name:'John', age:34}  // Returns "object"
+typeof new Date()             // Returns "object"
+typeof function () {}         // Returns "function"
+typeof myCar                  // Returns "undefined" *
+typeof null                   // Returns "object"
+```
+Please observe:
+
+The data type of NaN is number
+The data type of an array is object
+The data type of a date is object
+The data type of null is object
+The data type of an undefined variable is undefined *
+The data type of a variable that has not been assigned a value is also undefined *
+You cannot use typeof to determine if a JavaScript object is an array (or a date).
+
+The Data Type of typeof
+The typeofoperator is not a variable. It is an operator. Operators ( + - * / ) do not have any data type.
+
+But, the typeof operator always returns a string (containing the type of the operand).
+source: https://www.w3schools.com/js/js_type_conversion.asp
+
+`instanceof` 	The instanceof operator returns true if the specified object is an instance of the specified object:
+```js
+const cars = ["Saab", "Volvo", "BMW"];
+
+cars instanceof Array;          // Returns true
+cars instanceof Object;         // Returns true
+cars instanceof String;         // Returns false
+cars instanceof Number;         // Returns false
+```
+
+
+
 
 --- 
 
