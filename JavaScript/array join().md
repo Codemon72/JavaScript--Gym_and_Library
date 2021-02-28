@@ -1,4 +1,4 @@
-return array as new string
+return new string of merged array elements
 
 The join() method returns the array as a string.
 
