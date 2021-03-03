@@ -1,4 +1,18 @@
-# Specific Terms
+### NodeList vs HTMLCollection
+"I have a slider that dynamically adds dots based on number of slides. There is also a theme changing toggle and I couldn't for the love of god figure out why toggling classes on everything works, but not on these little dots.
+Couple hours later I've finally found a solution - I've been using
+
+`const dots = document.querySelectorAll(".projects__dot")`
+
+which returns a NodeList, which is STATIC (not LIVE).
+
+What it means that my const dots was declared before slider was initialized, so even after adding dots to the DOM it didn't update.
+
+After changing it to
+
+`const dots = document.getElementsByClassName("projects__dot")`,
+
+which is a simple HTMLCollection, which is LIVE (Dynamic), everything works just like it should." 
 
 #### Regular Expression
 
