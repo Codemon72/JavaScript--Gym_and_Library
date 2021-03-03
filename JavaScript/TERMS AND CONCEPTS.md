@@ -1,3 +1,7 @@
+### A Node in the DOM
+The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably. As an abstract class, there is no such thing as a plain Node object. All objects that implement Node functionality are based on one of its subclasses. Most notable are Document, Element, and DocumentFragment.
+source: https://developer.mozilla.org/en-US/docs/Web/API/Node
+
 ### NodeList vs HTMLCollection
 "I have a slider that dynamically adds dots based on number of slides. There is also a theme changing toggle and I couldn't for the love of god figure out why toggling classes on everything works, but not on these little dots.
 Couple hours later I've finally found a solution - I've been using
