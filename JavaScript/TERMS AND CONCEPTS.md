@@ -3,6 +3,14 @@ The DOM Node interface is an abstract base class upon which many other DOM API o
 source: https://developer.mozilla.org/en-US/docs/Web/API/Node
 
 ### NodeList vs HTMLCollection
+TLDR: 
+`document.querySelectorAll(".blib")` returns a NodeList
+`document.getElementsByClassName("blib")` returns an (array-like) HTMLCollection
+
+At first hand the HTMLCollection updates itself automatically every time it detects a change in the items that were retrieved by the method. On the other hand, NodeList will remain the same since the moment we executed it no matter the changes that occur in our HTML.
+source: https://dev.to/jharteaga/difference-between-htmlcollection-and-nodelist-25bp
+
+Example:
 "I have a slider that dynamically adds dots based on number of slides. There is also a theme changing toggle and I couldn't for the love of god figure out why toggling classes on everything works, but not on these little dots.
 Couple hours later I've finally found a solution - I've been using
 
