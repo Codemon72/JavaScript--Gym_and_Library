@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Examples</title>
 </head>
-<body>
-  
 
-  <script src="8_bigToSmall.js"></script>
+<body>
+
+  <form name="theform">
+    <input type="text" onKeyup="checkform()" />
+    <input type="text" onKeyup="checkform()" />
+    <input id="submitbutton" type="submit" disabled value="Submit" />
+  </form>
+
+  <!-- <script src="8_bigToSmall.js"></script> -->
+
   <script>
+    const checkform = () => {
+      const f = document.forms["theform"].elements;
+      let cansubmit = true;
+      console.log(f)
+
+      for (let i = 0; i < f.length; i++) {
+        if (f[i].value.length == 0) cansubmit = false;
+      }
+
+      document.getElementById('submitbutton').disabled = !cansubmit;
+    }
   </script>
+
 </body>
+
 </html>
