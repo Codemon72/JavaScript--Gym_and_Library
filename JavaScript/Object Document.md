@@ -6,7 +6,7 @@ The Document interface represents any web page loaded in the browser and serves 
 
 #### Properties I've Used and Liked
 https://developer.mozilla.org/en-US/docs/Web/API/Document#properties
-- Document.forms - Read only
+- Document.forms
   Returns an HTMLCollection of the <form> elements within the current document.
   If the document has no forms, the returned collection is empty, with a length of zero.
   Examples:
