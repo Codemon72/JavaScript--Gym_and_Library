@@ -21,14 +21,18 @@
 // - first digit of number: 
 
 const tailAndHead = (arr) => {
-  // First, from left to right, the tail of an element and the head of the next element are added together.
-  // const firstDigit = (num) => {};
+  const firstDigit = num => {return parseInt(('' + num)[0])};
   const lastDigit = num => {return num % 10};
-  // console.log(lastDigit(arr))
+  const temp = []
+
+  for (let i = 0; i < arr.length-1; i++){
+    temp.push(lastDigit(arr[i]) + firstDigit(arr[i + 1]))
+  }
+  return temp.reduce((a, b) => a * b);
 }
 
 
 
-// console.log(tailAndHead([1,2,3,4,5])) // should return 945
-// console.log(tailAndHead([111,2345,66,78,900])) // should return 7293
-// console.log(tailAndHead([35456,782,569,2454,875])) // should return 12012
+console.log(tailAndHead([1,2,3,4,5])) // should return 945
+console.log(tailAndHead([111,2345,66,78,900])) // should return 7293
+console.log(tailAndHead([35456,782,569,2454,875])) // should return 12012
