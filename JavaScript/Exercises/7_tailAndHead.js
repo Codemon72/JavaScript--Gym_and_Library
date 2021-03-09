@@ -18,7 +18,7 @@
 
 // Check: 
 // - last digit of number: modulo operator dividing by 10
-// - first digit of number: 
+// - first digit of number: parseInt(('' + num)[0])
 
 const tailAndHead = (arr) => {
   const firstDigit = num => {return parseInt(('' + num)[0])};
