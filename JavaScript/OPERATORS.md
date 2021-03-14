@@ -1,16 +1,61 @@
 https://www.w3schools.com/jsref/jsref_operators.asp
 
 #### Arithmetic Operators
+`+`     Addition (and also used for concatenating strings)
+`-`     Subtraction
+`*`     Multiplication
+`/`     Division
+`%`     Modulus (Division Remainder)
+`++`  	Increment
+`--`    Decrement
+`**`   	Exponentiation 
 
-#### Assignment Operators
+
+#### Assignment Operator
+`=`    assigns a value
+`+=`   example: x += y is the same as x = x + y
+`-=`   example: x -= y is the same as x = x - y
+`*=`   example: x += y is the same as x = x * y
+`/=`   example: x += y is the same as x = x / y
+`%=` 	 example: x += y is the same as x = x % y
+`**=`  example: x += y is the same as x = x ** y
 
 #### String Operators
 
 `+` and `+=`
 
 #### Comparison Operators
+`==`  	equal to
+`!=`   	not equal
+`>`     greater than
+`<`     less than
+`>=`  	greater than or equal to
+`<=`  	less than or equal to
+`===`   equal value and equal type (optional knowledge)
+`!==` 	not equal value or not equal type (optional knowledge)
 
 #### Conditional (Terniary) Operator
+ 
+```js
+number > 5 
+    ? console.log('Larger than 5')
+    : console.log('Lesser or equal 5')
+```
+
+```js
+[condition we want to test] 
+		? [code we want executed if true] 
+		: [code we want executed if false]
+```
+
+To express an `if else` statement we just put another condition to be tested after the colon (else):
+```js
+const canYouHaveBeer = (age) => {
+  age >= 18
+    ? alert(“Sure, we are in Europe, have a cold one!”)
+    : age === 17 alert(“So close! But unfortunately, not yet.”)
+    : alert(“Sorry young gun. How about a soda?”)
+}
 
 #### Logical Operators
 
