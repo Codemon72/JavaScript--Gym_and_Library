@@ -56,6 +56,22 @@ Declares a read-only named constant.
 
 # Functions and Classes
 
+`function`
+Declares a function with the specified parameters.
+
+`function*`
+Generator Functions enable writing iterators more easily.
+
+`async function`
+Declares an async function with the specified parameters.
+
+`return`
+Specifies the value to be returned by a function.
+
+`class`
+Declares a class.
+
+
 # Iterations
 ### Loops
 JavaScript supports different kinds of loops:
