@@ -1,4 +1,7 @@
-
+### Function Anatomy
+- function head
+- parameters / arguments
+- function body
 
 ### Default Values
 source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#default_parameters

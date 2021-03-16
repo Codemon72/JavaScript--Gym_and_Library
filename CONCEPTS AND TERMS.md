@@ -1,3 +1,21 @@
+### IIFE - Immediately Invokable Function Expression
+Basically a function that you declare and run at the same time.
+```js
+(function(){
+  console.log('IIFE ran...');
+})();
+// or:
+(() => {
+      console.log('IIFE is still running ...');
+})();
+```
+IIFE with parameters:
+```js
+((name) => {
+  console.log(`IIFE is running with parameter: ${name}`);
+})('Chipper');
+```
+
 ### A Node in the DOM
 The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably. As an abstract class, there is no such thing as a plain Node object. All objects that implement Node functionality are based on one of its subclasses. Most notable are Document, Element, and DocumentFragment.
 source: https://developer.mozilla.org/en-US/docs/Web/API/Node
