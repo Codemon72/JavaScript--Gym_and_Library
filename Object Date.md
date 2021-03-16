@@ -17,7 +17,7 @@ const date = new Date();
 
 date.getMonth(); // zero based: 0 - 11
 date.getDate(); // day of the month
-date.getDay(); // day of the week; Sunday (1) to Saturday (7)
+date.getDay(); // day of the week; Sunday (0) to Saturday (6)
 date.getFullYear(); // 2021
 date.getHours(); 
 date.getMinutes();
