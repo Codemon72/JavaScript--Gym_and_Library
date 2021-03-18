@@ -6,20 +6,23 @@ JavaScript objects are containers for named values called properties or methods.
 
 #### How to add key value pair to an object
 
-very easy:
-
-```
+easy:
+```js
 const person = {
   firstName: "John",
   lastName : "Doe",
   id     : 5566
 };
 
+// add variable
+person.vice = "blueberries";
+
+// add method
 person.name = function() {
   return this.firstName + " " + this.lastName;
 };
-person.vice = "blueberries";
 
+// check what you got
 console.log(person)
 ```
 
