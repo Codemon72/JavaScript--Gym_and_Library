@@ -91,3 +91,10 @@ for (x in person) {
 - do/while - also loops through a block of code while a specified condition is true
 
 source: https://www.w3schools.com/js/js_loop_for.asp
+
+
+# Others
+
+`debugger` 
+Invokes any available debugging functionality. If no debugging functionality is available, this statement has no effect.
+
