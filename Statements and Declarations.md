@@ -78,7 +78,7 @@ JavaScript supports different kinds of loops:
 
 - for - loops through a block of code a number of times
 - for/in - loops through the properties of an object
-```
+```js
 let txt = "";
 const person = {fname:"John", lname:"Doe", age:25}; 
 
@@ -86,11 +86,38 @@ for (x in person) {
   txt += person[x] + " ";
 }
 ```
-- for/of - loops through the values of an iterable object
+- for ...of - Iterates over iterable objects (including arrays, array-like objects, iterators and generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - while - loops through a block of code while a specified condition is true
-- do/while - also loops through a block of code while a specified condition is true
+- do/while - same as while but will always run at least once
+  ```js
+  let i = 100;
 
-source: https://www.w3schools.com/js/js_loop_for.asp
+  do {
+    console.log('Number ' + i)
+  }
+
+  while (i < 10 );
+  // -> Number 100
+  ```
+- for ...in loop - Iterates over the enumerable properties of an **object**, in arbitrary order. For each distinct property, statements can be executed.
+  ```js
+  const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 42
+  }
+  for (let x in user) {
+    console.log(`key: ${x} has value: ${user[x]}`)
+  }
+  // will log out keys (x) and values (user[x])
+  ```
+
+- `continue` - terminates current iteration and jumps to the next
+- `break` - terminates the whole loop
+- **Tip**: also consider using `forEach()` or `map()` for your iterations
+
+source:  
+- https://www.w3schools.com/js/js_loop_for.asp
 
 
 # Others
