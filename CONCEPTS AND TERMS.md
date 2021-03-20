@@ -16,6 +16,15 @@ IIFE with parameters:
 })('Chipper');
 ```
 
+### Scope
+
+Global Scope
+Function Scope
+Block Scope - e.g inside curly brackets of an if statement. Same named globally with `var` declared variable will be overwritten here
+
+reference: https://developer.mozilla.org/en-US/docs/Glossary/Scope
+
+
 ### A Node in the DOM
 The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably. As an abstract class, there is no such thing as a plain Node object. All objects that implement Node functionality are based on one of its subclasses. Most notable are Document, Element, and DocumentFragment.
 source: https://developer.mozilla.org/en-US/docs/Web/API/Node
