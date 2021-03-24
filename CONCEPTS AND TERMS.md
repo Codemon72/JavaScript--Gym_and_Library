@@ -1,3 +1,10 @@
+### HTMLCollection
+An HTMLCollection object is an _array-like_ list of HTML elements.
+
+Methods like the `getElementsByTagName()` returns an HTMLCollection.
+
+An HTMLCollection in the HTML DOM is live; it is automatically updated when the underlying document is changed.
+
 ### IIFE - Immediately Invokable Function Expression
 Basically a function that you declare and run at the same time.
 ```js
