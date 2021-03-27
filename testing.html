@@ -13,12 +13,14 @@
 
 
   <script>
-    const obj = {
-      name: 'Anton',
-      lastname: 'Schlicksbier',
-      age: 48
+    const jsonObject = {
+      "employees": [
+        { "firstName": "John", "lastName": "Doe" },
+        { "firstName": "Anna", "lastName": "Smith" },
+        { "firstName": "Peter", "lastName": "Jones" }
+      ]
     }
-    console.log(JSON.stringify(obj));
+    console.log(typeof jsonObject);
   </script>
 </body>
 

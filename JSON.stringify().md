@@ -1,6 +1,7 @@
 The JSON.stringify() method converts JavaScript objects into strings.
 
 When sending data to a web server the data has to be a string.
+Since the JSON format is text only, it can easily be sent to and from a server, and used as a data format by any programming language.
 
 ### Syntax
 `JSON.stringify(obj, replacer, space)`
