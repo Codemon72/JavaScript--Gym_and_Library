@@ -13,13 +13,7 @@ const elements = rootElement.getElementsByClassName(names);
 - getElementsByClassName can be called on any element, not only on the document. The element on which it is called will be used as the root of the search.
 
 
-Example:
-```js
-const items = document.getElementsByClassName('collection-item'); // 
-
-// target only the children of a specific element
-const listItems = document.querySelector('ul').getElementByClassName('collection-item');
-```
+### Examples
 
 Get all elements that have a class of 'test':
 ```js
