@@ -60,6 +60,13 @@ After changing it to
 
 which is a simple HTMLCollection, which is LIVE (Dynamic), everything works just like it should." 
 
+---
+### null vs undefined
+`null` is the intentional, `undefined` the unintentional absence of value.
+=> good practice: if you want to set something to 'no value' set it to `null`. If the JS engine is setting something to 'no value' it will use `undefined`.
+
+--- 
+
 #### Regular Expression
 
 A regular expression is an object that describes a pattern of characters.
