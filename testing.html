@@ -13,13 +13,16 @@
   <div id="bling" class="fancy">Blueberries</div>
 
   <script>
-    console.log(document.getElementById('bling').id); // bling
-    console.log(document.getElementById('bling').className); // fancy
-    document.getElementById('bling').style.background = '#333';
-    document.getElementById('bling').style.color = '#fff';
-    document.getElementById('bling').style.padding = '5px 10px';
-    document.getElementById('bling').textContent = 'Bling Div';
-    document.getElementById('bling').innerHTML = '<span style="color:orangered">Bling Div</span>'
+    let var1;         // undefined
+    let var2 = null;  // null
+    let var3 = '';    // empty string
+    let var4 = 0;     // 0
+
+    console.log(var1 === var2);
+    console.log(var2 == var1);
+    console.log(var2 == var3);
+    console.log(var2 == var4);
+
   </script>
 </body>
 

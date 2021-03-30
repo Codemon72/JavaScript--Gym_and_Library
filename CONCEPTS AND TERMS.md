@@ -65,6 +65,28 @@ which is a simple HTMLCollection, which is LIVE (Dynamic), everything works just
 `null` is the intentional, `undefined` the unintentional absence of value.
 => good practice: if you want to set something to 'no value' set it to `null`. If the JS engine is setting something to 'no value' it will use `undefined`.
 
+### truthy vs falsy
+
+```js
+// in a conditional will all evaluate to false:
+let var1;         // undefined
+let var2 = null;  // null
+let var3 = '';    // empty string
+let var4 = 0;     // 0
+```
+
+### checking for absence of value
+```js
+null === undefined  // false
+null == undefined   // true
+typeof undefined    // undefined
+typeof null         // object (legacy reasons)
+
+if (varX == null) {
+  console.log('absence of value')
+}
+```
+
 --- 
 
 #### Regular Expression
