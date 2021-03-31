@@ -9,6 +9,20 @@ ___
 - `debugger` statement
 - Browser Dev Tools
 
+### `console.log()` with context
+```js
+const pin1 = 'Vilnius'
+const pin2 = 'Auckland'
+console.log(pin1, pin2)
+// -> Vilnius Auckland
+```
+```js
+const pin1 = 'Vilnius'
+const pin2 = 'Auckland'
+console.log({pin1, pin2})
+// > {pin1: "Vilnius", pin2: "Auckland"}
+```
+
 
 #### `debugger`statement
 It is possible to add a breakpoint in the source code using the `debugger` statement. Once a debugger statement is reached, execution stops. The context of the current scope is exposed in the console, together with all local and global variables. Values of variables can be inspected by moving the cursor over them.
