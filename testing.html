@@ -13,21 +13,14 @@
   <div id="bling" class="fancy">Blueberries</div>
 
   <script>
-    const pin1 = 'Vilnius'
-    const pin2 = 'Auckland'
-    console.log(pin1, pin2)
-    console.log({ pin1, pin2 })
+    function foo() {
+      function bar() {
+        console.trace();
+      }
+      bar();
+    }
 
-    const mapPins = [
-      { ID: "6", name: "Precious Plastic Vienna", lat: 48.179909, lng: 16.41756 },
-      { ID: "7", name: "Jerry's Place", lat: 53.330422, lng: 6.515993 }
-    ]
-
-    console.table(mapPins)
-
-    
-
-    // console.log(typeof var4 == 'undefined' )
+    foo();
 
   </script>
 </body>
