@@ -1,3 +1,60 @@
+## Data Types, Conversion and Coercion
+### Data Types
+Basically there are 2 data types:
+- **Primitive Data Types**
+  - stored directly in the location the variable accesses
+  - stored on the stack
+  - string, number, boolean, null (intentional empty value), undefined (variable that has not been assigned a value), Symbols (ES6)
+  - Note: `typeof Null` will return: 'Object' but this is basically a bug in JavaScript. Google it.
+- **Reference Data Types / Objects**
+  - accessed by reference
+  - objects that are store on the heap
+  - pointer to a location in memory
+  - Array, Object Literal, Function, Date, Anything Else...
+
+#### Type Conversion
+```js
+let val;
+
+// TO STRING
+// Number to string
+val = String(555)
+val = String(4 + 4) // val = "8"
+val = (5).toString()
+// Bool to string
+val = String(true)
+val = (true).toString()
+// Date to string
+val = String(new Date())
+val = (new Date()).toString()
+// Array to string
+val = String([1,2,3,4])
+val = [1,2,3,4].toString()
+
+// TO NUMBER
+val = Number('5')
+val = Number(true)  // -> 1
+val = Number(false) // -> 0
+val = Number(null)  // -> 0
+val = Number('Hello') // -> NaN
+val = Number([1,2,3]) // -> NaN
+
+val = parseInt('100.31') // -> 100
+val = parseFloat('100.31') // -> 100.31
+```
+
+#### Type Coercion
+type coercion is done by JavaScript for us. 
+Example:
+```js
+const val1 = String(5)
+const val2 = 6
+cons sum = val1 + val2;
+console.log(sum)        // -> 56
+console.log(typeof sum) // -> string
+```
+
+---
 ### HTMLCollection
 An HTMLCollection object is an _array-like_ list of HTML elements.
 
@@ -22,7 +79,7 @@ IIFE with parameters:
   console.log(`IIFE is running with parameter: ${name}`);
 })('Chipper');
 ```
-
+___
 ### Scope
 
 Global Scope
@@ -31,11 +88,12 @@ Block Scope - e.g inside curly brackets of an if statement. Same named globally 
 
 reference: https://developer.mozilla.org/en-US/docs/Glossary/Scope
 
-
+___
 ### A Node in the DOM
 The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably. As an abstract class, there is no such thing as a plain Node object. All objects that implement Node functionality are based on one of its subclasses. Most notable are Document, Element, and DocumentFragment.
 source: https://developer.mozilla.org/en-US/docs/Web/API/Node
 
+___ 
 ### NodeList vs HTMLCollection
 TLDR: 
 `document.querySelectorAll(".blib")` returns a NodeList
