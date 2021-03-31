@@ -61,27 +61,41 @@ After changing it to
 which is a simple HTMLCollection, which is LIVE (Dynamic), everything works just like it should." 
 
 ---
+## truthy, falsy, absence of value
+
 ### null vs undefined
 `null` is the intentional, `undefined` the unintentional absence of value.
 => good practice: if you want to set something to 'no value' set it to `null`. If the JS engine is setting something to 'no value' it will use `undefined`.
 
 ### truthy vs falsy
+Anything that evaluates to `false` in a conditional is 'falsy'.
+All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN).
+JavaScript uses type coercion in Boolean contexts.
 
-```js
-// in a conditional will all evaluate to false:
-let var1;         // undefined
-let var2 = null;  // null
-let var3 = '';    // empty string
-let var4 = 0;     // 0
-```
+in a conditional these will all evaluate to false:
+- `undefined`
+- `null`
+- empty string `''` `""` ` `` ` 
+- `0`
+- `NaN`
+- `false`
+
+everything else will evaluate to true!
+For example:
+- `{}`
+- `[]`
+- `-5`
 
 ### checking for absence of value
 ```js
 null === undefined  // false
 null == undefined   // true
+
+// because:
 typeof undefined    // undefined
 typeof null         // object (legacy reasons)
 
+// checking for absence of value
 if (varX == null) {
   console.log('absence of value')
 }

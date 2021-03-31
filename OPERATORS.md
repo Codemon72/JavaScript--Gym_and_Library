@@ -32,7 +32,7 @@ https://www.w3schools.com/jsref/jsref_operators.asp
 `>=`  	greater than or equal to
 `<=`  	less than or equal to
 `===`   equal value and equal type // 'identity operator'
-`!==` 	not equal value or not equal type
+`!==` 	not equal value and / or not equal type
 
 #### Conditional (Terniary) Operator
  
