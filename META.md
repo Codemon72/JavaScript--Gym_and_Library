@@ -40,7 +40,7 @@ Breakpoints and conditional breakpoints can also be inserted in the Dev Tools of
 sources: 
 - James Q Quick [tutorial for Debugging in VSCode and Google Chrome](https://www.youtube.com/watch?v=AX7uybwukkk)
 - http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/
-
+- youtube: [Essential JavaScript debugging tools for the modern detective by Rebecca Hill | JSConf Budapest 2019](https://www.youtube.com/watch?v=TtsvMRxmfGA)
 ___ 
 
 
