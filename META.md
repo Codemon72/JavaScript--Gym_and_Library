@@ -7,6 +7,8 @@ ___
 
 - `console.log()`
 - `debugger` statement
+- breakpoints in gutter of IDE
+- debugger tool in IDE
 - Browser Dev Tools
 
 ### `console.log()` with context
@@ -23,7 +25,6 @@ console.log({pin1, pin2})
 // > {pin1: "Vilnius", pin2: "Auckland"}
 ```
 
-
 #### `debugger`statement
 It is possible to add a breakpoint in the source code using the `debugger` statement. Once a debugger statement is reached, execution stops. The context of the current scope is exposed in the console, together with all local and global variables. Values of variables can be inspected by moving the cursor over them.
 
@@ -33,6 +34,9 @@ if ( condition ) {
     debugger;
 }
 ```
+
+### breakpoints in gutter of IDE
+
 
 #### Dev Tools
 Breakpoints and conditional breakpoints can also be inserted in the Dev Tools of your choice. In the Chrome Dev Tools, clicking on a line number in the Sources view adds a breakpoint. If you right click on a breakpoint and select “Edit Breakpoint”, you can also add a condition.
