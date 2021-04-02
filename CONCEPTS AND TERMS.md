@@ -92,7 +92,8 @@ ___
 ### node vs element vs child node
 **node**:  every single thing in HTML is a node. That means if you have:
 `<li class=list-item> some text </li>` 
- you have 3 nodes: li, class declaration and the text inside li
+ you have 3 nodes: li, class declaration and the text inside li.
+ Even line-breaks in your code are text-nodes.
 
 **element**: only nodes which have an element tag => every single html tag (a, div, ul, ol, section etc.)
 
