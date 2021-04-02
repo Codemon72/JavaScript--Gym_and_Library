@@ -89,13 +89,26 @@ Block Scope - e.g inside curly brackets of an if statement. Same named globally 
 reference: https://developer.mozilla.org/en-US/docs/Glossary/Scope
 
 ___
-### A Node in the DOM
+### node vs element vs child node
+**node**:  every single thing in HTML is a node. That means if you have:
+`<li class=list-item> some text </li>` 
+ you have 3 nodes: li, class declaration and the text inside li
+
+**element**: only nodes which have an element tag => every single html tag (a, div, ul, ol, section etc.)
+
+**child node**:  is a node that is one or more level below the targeted element or node ('nested in')
+
 The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably. As an abstract class, there is no such thing as a plain Node object. All objects that implement Node functionality are based on one of its subclasses. Most notable are Document, Element, and DocumentFragment.
 source: https://developer.mozilla.org/en-US/docs/Web/API/Node
 
 ___ 
 ### NodeList vs HTMLCollection
 TLDR: 
+- Nodelist can contain any type of nodes like text, comment, element nodes but HTML collection contains element nodes only.
+- both are not arrays, but NodeLists are iterable (works with `forEach()`)
+
+(Array's are iterable objects that have their keys as indexed numbers and have available all the array methods.)
+
 `document.querySelectorAll(".blib")` returns a NodeList
 `document.getElementsByClassName("blib")` returns an (array-like) HTMLCollection
 
