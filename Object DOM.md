@@ -7,7 +7,7 @@ let val;
 const list = document.querySelector('ul.collection');
 const listItem = document.querySelector('li.collection-item:first-child');
 
-// get child nodes
+// Get child nodes
 val = list.childNodes; // returns a NodeList
 val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
@@ -20,7 +20,7 @@ val = list.childNodes[0].nodeType;
 // 9 - Document itself
 // 10 - Doctype
 
-// get children element nodes
+// Get children element nodes
 val = list.children // returns an HTMLCollection
 val = list.children[1];
 list.children[1].textContent = 'Hello';
@@ -54,7 +54,42 @@ val = listItem.previousElementSibling;
 console.log(val);
 ```
 
+### Creating elements
+```js
+// Create element
+const li  = document.createElement('li');
 
+// Add class
+li.className = 'collection-item';
+
+// Add id
+li.id = 'new-item';
+
+// Add attribute
+li.setAttribute('title', 'New Item');
+
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
+
+// Create new link element
+const link = document.createElement('a');
+
+// Add classes
+// div.classList.add("anotherclass");
+link.className = 'delete-item secondary-content';
+
+// remove classes
+// div.classList.remove("foo");
+
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append link into li
+li.appendChild(link);
+
+// Append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+```
 
 
 sources:
