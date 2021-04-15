@@ -202,3 +202,15 @@ One of the reasons AMD failed was that it is a lot more complex than the alterna
 That said, if you write code today, just use either Node-style imports directly or a tool like Babel that translates ES6 imports to Node-style ones.
 
 source: https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+___
+
+### import vs require
+Is there any important difference between import and require ?
+And: why do I see all tutorials and examples in Node.js with require and all in React with import?
+
+From reddit: "For a long time, javascript did not have any sort of import mechanism. The way to share code between files was to stick them all in the same file (usually an HTML file in a browser). When people started using JS outside of browsers, and for bigger applications, some people noticed this hole and built CommonJS: a language standard which included require imports, among other things. A few projects have implemented/ spun off this; primarily node, the most popular non-browser javascript environment. A few build tools for browsers also implemented it.
+
+Eventually, ECMAscript (i.e. the core standardised javascript) added their own import standard: import. It's the official correct way for javascript to do imports. However, for some time require remained more common to see than import because a standards organisation defining a standard is not the same as every implementor catching up with the feature.
+
+If import works for you and your targets, use it. It's the "correct" way to do it."
+source: https://www.reddit.com/r/webdev/comments/cfbcfy/import_vs_require/
