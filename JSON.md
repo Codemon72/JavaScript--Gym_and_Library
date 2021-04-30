@@ -8,8 +8,8 @@ JavaScript Object Notation (JSON) is a standard text-based format for representi
 - MIME type is `Application/json`
 
 JSON looks very much like a JS object, but there are differences. 
-- JSON keys **must** be wrapped in double quotes: `" "`
-- JSON string values must be wrapped in double quotes as well. (Single quotes would be invalid.)
+- JSON keys **must** be wrapped **in double quotes**: `" "`
+- JSON **string values** must be wrapped **in double quotes** as well. (Single quotes would be invalid.)
 - JSON values can't be a function, date or undefined 
 - all JSON is valid JS, but not all JS objects are valid JSON
 
