@@ -29,3 +29,6 @@ Example:
 ```json
 
 ```
+
+### Json file
+- if you create a `.json` file it will automatically put everything into a string. (It knows it's a JSON file.)
