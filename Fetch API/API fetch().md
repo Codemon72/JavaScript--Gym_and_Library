@@ -14,6 +14,11 @@ fetch('http://example.com/movies.json')
   .then(data => console.log(data));
 ```
 
+### Syntax
+```js
+const fetchResponsePromise = fetch(resource, init);
+```
+
 ### Parameters
 - resource - usually an url
 - init object - optional - An object containing any custom settings that you want to apply to the request. The possible options are:
