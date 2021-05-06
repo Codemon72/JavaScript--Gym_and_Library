@@ -53,8 +53,9 @@ cons sum = val1 + val2;
 console.log(sum)        // -> 56
 console.log(typeof sum) // -> string
 ```
+___
 
----
+
 ### HTMLCollection
 An HTMLCollection object is an _array-like_ list of HTML elements.
 
@@ -80,6 +81,8 @@ IIFE with parameters:
 })('Chipper');
 ```
 ___
+
+
 ### Scope
 
 Global Scope
@@ -87,8 +90,9 @@ Function Scope
 Block Scope - e.g inside curly brackets of an if statement. Same named globally with `var` declared variable will be overwritten here
 
 reference: https://developer.mozilla.org/en-US/docs/Glossary/Scope
-
 ___
+
+
 ### node vs element vs child node
 **node**:  every single thing in HTML is a node. That means if you have:
 `<li class=list-item> some text </li>` 
@@ -101,8 +105,9 @@ ___
 
 The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably. As an abstract class, there is no such thing as a plain Node object. All objects that implement Node functionality are based on one of its subclasses. Most notable are Document, Element, and DocumentFragment.
 source: https://developer.mozilla.org/en-US/docs/Web/API/Node
-
 ___ 
+
+
 ### NodeList vs HTMLCollection
 TLDR: 
 - Nodelist can contain any type of nodes like text, comment, element nodes but HTML collection contains element nodes only.
@@ -131,8 +136,9 @@ After changing it to
 `const dots = document.getElementsByClassName("projects__dot")`,
 
 which is a simple HTMLCollection, which is LIVE (Dynamic), everything works just like it should." 
+___
 
----
+
 ## truthy, falsy, absence of value
 
 ### truthy vs falsy
@@ -175,8 +181,8 @@ if (variableX == null) {
   console.log('absence of value')
 }
 ```
+___
 
---- 
 
 #### Regular Expression
 
@@ -214,3 +220,8 @@ Eventually, ECMAscript (i.e. the core standardised javascript) added their own i
 
 If import works for you and your targets, use it. It's the "correct" way to do it."
 source: https://www.reddit.com/r/webdev/comments/cfbcfy/import_vs_require/
+___
+
+
+### Promises
+- "they are ways to ensure you have data before you try to do something with the data, when the request might take a while."

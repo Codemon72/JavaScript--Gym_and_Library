@@ -1,11 +1,9 @@
 
 
-
-
 #### async await
 async and await make promises easier to write
-- async makes a function return a Promise
-- await makes a function wait for a Promise
+- `async` makes a function return a Promise
+- `await` stops execution of the code until everything on it's right side is resolved
 
 Examples:
 
@@ -15,11 +13,14 @@ const API_URL = 'http://.....'
 
 // Get initial movies
 getMovies(API_URL)
+  .then(data => console.log('resolved', data))
+  .catch(error => console.log('error:', error))
 
 
-async function getMovies(url) {
-  const res = await fetch(url)
-  const data = await res.json()
+const getMovies = async (url) {
+  const response = await fetch(url);
+  const data = await response.json();
 
-  console.log(data.results)
+  return data;
 }
+```
