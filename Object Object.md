@@ -42,6 +42,12 @@ or
 
 `objectName["propertyName"]`
 
+
+### How to check if value exists in object?
+```js
+let exists = Object.values(exampleObject).includes("example");
+```
+
 #### Object Spreading
 
 // spread operator in arrays:
