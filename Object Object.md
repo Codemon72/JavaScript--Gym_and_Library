@@ -26,6 +26,11 @@ person.name = function() {
 console.log(person)
 ```
 
+#### How to delete key value pair from object
+```js
+delete objectName.keyName;
+delete objectName[keyName];
+```
 
 #### How to access object properties
 
