@@ -45,7 +45,7 @@ or
 
 ### How to check if value exists in object?
 ```js
-let exists = Object.values(exampleObject).includes("example");
+let exists = Object.values(exampleObject).includes('example');
 ```
 
 #### Object Spreading
