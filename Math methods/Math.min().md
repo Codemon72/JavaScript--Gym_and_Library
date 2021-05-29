@@ -1,12 +1,14 @@
-The min() method returns the number with the lowest value.
+The `min()` method returns the number with the lowest value.
 
-Tip: The max() method returns the number with the highest value.
+Absolute value describes the distance from zero that a number is on the number line, without considering direction. The absolute value of a number is never negative.
 
-#### Syntax
+**Tip**: The `max()` method returns the number with the highest value.
+
+### Syntax
 
 `Math.min(n1, n2, n3, ..., nX)`
 
-Parameter Values
+### Parameter Values
 
 - Optional. One or more numbers to compare.
 
