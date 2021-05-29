@@ -25,6 +25,12 @@ const maxMin = (arr1, arr2) => {
   return(arrMaxMin)
 }
 
+// Short version:
+// const maxMin = (arr1,arr2) => {
+//   const rs = arr1.map((x,i) => Math.abs(x-arr2[i]));
+//   return [Math.max(...rs),Math.min(...rs)];
+// };
+
 
 console.log(maxMin([1,3,5],[9,8,7]))               // expected: [8,2]
 console.log(maxMin([1,10,100,1000],[0,0,0,0]))     // expected: [1000,1]
