@@ -18,12 +18,14 @@ const maxMin = (arr1, arr2) => {
   for (let i = 0; i < arr1.length; i++) {
     const numDiff = arr1[i] - arr2[i];
     arrDiff.push(Math.abs(numDiff))
-
   }
-  console.log(arrDiff)
+  let arrMaxMin = [];
+  arrMaxMin.push(Math.max(...arrDiff));
+  arrMaxMin.push(Math.min(...arrDiff));
+  return(arrMaxMin)
 }
 
 
-// console.log(maxMin([1,3,5],[9,8,7]))               // expected: [8,2]
-// console.log(maxMin([1,10,100,1000],[0,0,0,0]))     // expected: [1000,1]
-// console.log(maxMin([10,20,30,40],[111,11,1,-111])) // expected: [151,9]
+console.log(maxMin([1,3,5],[9,8,7]))               // expected: [8,2]
+console.log(maxMin([1,10,100,1000],[0,0,0,0]))     // expected: [1000,1]
+console.log(maxMin([10,20,30,40],[111,11,1,-111])) // expected: [151,9]
