@@ -13,14 +13,9 @@
   <div id="bling" class="fancy">Blueberries</div>
 
   <script>
-    function foo() {
-      function bar() {
-        console.trace();
-      }
-      bar();
-    }
-
-    foo();
+    const nuts = ["Walnut", "Hazelnut"];
+    nuts[nuts.length] = "Coconut";
+    console.log(nuts) // ["Walnut", "Hazelnut", "Coconut"]
 
   </script>
 </body>
