@@ -30,6 +30,16 @@ nuts[nuts.length] = "Coconut";
 console.log(nuts) // ["Walnut", "Hazelnut", "Coconut"]
 ```
 source / indepth article: https://www.samanthaming.com/tidbits/87-5-ways-to-append-item-to-array/
+___
 
+
+### Remove Element from Array
+- `pop()` - Removes from the End of an Array
+- `shift()` - Removes from the beginning of an Array
+- `splice()` - removes from a specific Array index
+- `filter()` - allows you to programatically remove elements from an Array
+- and some more (see article below)
+source: https://love2dev.com/blog/javascript-remove-from-array/
+___
 
 good reference: https://www.w3schools.com/jsref/jsref_obj_array.asp
