@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Outside</title>
+
+  <style>
+    body {
+      background-color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #clickbox {
+      background-color: floralwhite;
+    }
+    div {
+      background-color: chartreuse;
+      margin-top: 3rem;
+      max-width: 1100px;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h2>I'm not THE div</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius obcaecati possimus, eligendi dignissimos hic cum doloremque qui modi a explicabo! Aspernatur commodi, quod sunt aliquam aut dicta sed odit cum? Assumenda, atque facere? Molestias cumque ut perspiciatis aspernatur nostrum dolorum reiciendis quo? Quidem eos facere maiores officiis soluta accusantium officia.
+    </p>
+  </div>
+
+  <div id="clickbox">
+    <h1>I'm THE div.</h1>
+    <h3>Sometimes you want to open a field and register, when the user clicks outside of it. </h3>
+    <h3>Here is the simplest code I could find for that.</h3>
+    <h2>Click in- and outside this box to check its functionality.</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius obcaecati possimus, eligendi dignissimos hic cum doloremque qui modi a explicabo! Aspernatur commodi, quod sunt aliquam aut dicta sed odit cum? Assumenda, atque facere? Molestias cumque ut perspiciatis aspernatur nostrum dolorum reiciendis quo? Quidem eos facere maiores officiis soluta accusantium officia.</p>
+    <img src="http://lorempixel.com/100/100/nature/1" alt="">
+    <ul>
+      <li>Shampoo</li>
+      <li>Soap</li>
+      <li>Toothpaste</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>I'm also not THE div</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius obcaecati possimus, eligendi dignissimos hic cum doloremque qui modi a explicabo! Aspernatur commodi, quod sunt aliquam aut dicta sed odit cum? Assumenda, atque facere? Molestias cumque ut perspiciatis aspernatur nostrum dolorum reiciendis quo? Quidem eos facere maiores officiis soluta accusantium officia.
+    </p>
+  </div>
+
+  <script>
+    window.addEventListener('click', (e) => {
+
+      if (document.getElementById('clickbox').contains(e.target)) {
+        alert("Clicked in Box");
+      } else {
+        alert("Clicked outside Box");
+      }
+    })
+  </script>
+
+</body>
+
+</html>
