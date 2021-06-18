@@ -19,3 +19,12 @@ Parameter Values:
 **Return Value**:	A String, representing the extracted part of the string
 
 source: https://www.w3schools.com/jsref/jsref_slice_string.asp
+
+Examples:
+
+Remove first and last character of a string:
+```js
+const removeChar = (str) =>  {
+  return str.slice(1, -1)
+};
+```
