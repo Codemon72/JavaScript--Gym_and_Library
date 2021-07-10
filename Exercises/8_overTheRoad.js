@@ -16,5 +16,9 @@
 // overTheRoad(3, 5) = 8
 
 const overTheRoad = (address, n) => {
-  
+  // create 2 arrays with length of n
+  // array odds
+  // array evens
+  // checks both arrays for address and get the index
+  // if address is in odds return what is at evens.index and vice versa
 }
