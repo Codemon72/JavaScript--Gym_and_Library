@@ -17,8 +17,20 @@
 
 const overTheRoad = (address, n) => {
   // create 2 arrays with length of n
-  // array odds
-  // array evens
-  // checks both arrays for address and get the index
+  // array odds and evens
+  let odds = [];
+  let evens = [];
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 !== 0){
+      odds.push(i)
+    } else {
+      evens.push(i)
+    }
+  }
+
+  console.log(address, odds, evens);
+  // check both arrays for address and get the index
   // if address is in odds return what is at evens.index and vice versa
 }
+
+overTheRoad(2, 8);
