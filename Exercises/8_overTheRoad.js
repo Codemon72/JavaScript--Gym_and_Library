@@ -20,17 +20,23 @@ const overTheRoad = (address, n) => {
   // array odds and evens
   let odds = [];
   let evens = [];
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= n * 2; i++) {
     if (i % 2 !== 0){
       odds.push(i)
     } else {
-      evens.push(i)
+      evens.unshift(i)
     }
   }
-
-  console.log(address, odds, evens);
   // check both arrays for address and get the index
   // if address is in odds return what is at evens.index and vice versa
+  if (odds.indexOf(address) > -1) {
+    console.log(`found in odds at index: ${odds.indexOf(address)}`)
+    return evens[odds.indexOf(address)]
+  }
+  if (evens.indexOf(address) > -1) {
+    console.log(`found in evens at index: ${evens.indexOf(address)}`)
+    return odds[evens.indexOf(address)]
+  }
 }
 
-overTheRoad(2, 8);
+console.log(overTheRoad(3, 5));
