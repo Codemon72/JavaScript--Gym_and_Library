@@ -15,28 +15,36 @@
 // overTheRoad(2, 3) = 5
 // overTheRoad(3, 5) = 8
 
+
+// coding solution:
+
+// const overTheRoad = (address, n) => {
+//   // create 2 arrays with length of n
+//   // array odds and evens
+//   let odds = [];
+//   let evens = [];
+//   for (let i = 1; i <= n * 2; i++) {
+//     if (i % 2 !== 0){
+//       odds.push(i)
+//     } else {
+//       evens.unshift(i)
+//     }
+//   }
+//   // check both arrays for address and get the index
+//   // if address is in odds return what is at evens.index and vice versa
+//   if (odds.indexOf(address) > -1) {
+//     console.log(`found in odds at index: ${odds.indexOf(address)}`)
+//     return evens[odds.indexOf(address)]
+//   }
+//   if (evens.indexOf(address) > -1) {
+//     console.log(`found in evens at index: ${evens.indexOf(address)}`)
+//     return odds[evens.indexOf(address)]
+//   }
+// }
+
+// mathematical solution:
 const overTheRoad = (address, n) => {
-  // create 2 arrays with length of n
-  // array odds and evens
-  let odds = [];
-  let evens = [];
-  for (let i = 1; i <= n * 2; i++) {
-    if (i % 2 !== 0){
-      odds.push(i)
-    } else {
-      evens.unshift(i)
-    }
-  }
-  // check both arrays for address and get the index
-  // if address is in odds return what is at evens.index and vice versa
-  if (odds.indexOf(address) > -1) {
-    console.log(`found in odds at index: ${odds.indexOf(address)}`)
-    return evens[odds.indexOf(address)]
-  }
-  if (evens.indexOf(address) > -1) {
-    console.log(`found in evens at index: ${evens.indexOf(address)}`)
-    return odds[evens.indexOf(address)]
-  }
+  return n * 2 + 1 - address;
 }
 
-console.log(overTheRoad(3, 5));
+console.log(overTheRoad(3, 6));
