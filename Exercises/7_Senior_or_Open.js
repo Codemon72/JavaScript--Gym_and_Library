@@ -12,7 +12,7 @@
 
 // Example Output
 // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
-// https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/train/javascript
+
 
 const openOrSenior = (data) => {
   let evaluatedData = [];
