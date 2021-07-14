@@ -14,17 +14,22 @@
 // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 
+// const openOrSenior = (data) => {
+//   let evaluatedData = [];
+//   data.forEach((numbers) => {
+//     if (numbers[0] >= 55 && numbers[1] > 7) {
+//       evaluatedData.push("Senior");
+//     } else {
+//       evaluatedData.push("Open");
+//     }
+//   });
+//   return evaluatedData;
+// };
+
+// more elegant:
 const openOrSenior = (data) => {
-  let evaluatedData = [];
-  data.forEach((numbers) => {
-    if (numbers[0] >= 55 && numbers[1] > 7) {
-      evaluatedData.push("Senior");
-    } else {
-      evaluatedData.push("Open");
-    }
-  });
-  return evaluatedData;
-};
+  return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+}
 
 const exampleData = [
   [18, 20],
@@ -34,5 +39,7 @@ const exampleData = [
   [21, 21],
   [78, 9],
 ];
+
+
 
 console.log(openOrSenior(exampleData));
