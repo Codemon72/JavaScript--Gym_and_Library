@@ -12,16 +12,27 @@
 
 // Example Output
 // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+// https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/train/javascript
 
 const openOrSenior = (data) => {
   let evaluatedData = [];
-  // for loop or forEach: 
-  // if first number >= 55 && second number > 7 push "Senior"
-  // else push "Open"
-  // return evaluatedData  
-}
+  data.forEach((numbers) => {
+    if (numbers[0] >= 55 && numbers[1] > 7) {
+      evaluatedData.push("Senior");
+    } else {
+      evaluatedData.push("Open");
+    }
+  });
+  return evaluatedData;
+};
 
-
-const exampleData = [[18, 20],[45, 2],[61, 12],[37, 6],[21, 21],[78, 9]];
+const exampleData = [
+  [18, 20],
+  [45, 2],
+  [61, 12],
+  [37, 6],
+  [21, 21],
+  [78, 9],
+];
 
 console.log(openOrSenior(exampleData));
