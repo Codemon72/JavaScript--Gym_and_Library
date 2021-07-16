@@ -14,7 +14,7 @@
 // For the sake of simplicity, you can assume that any numbers passed into the function will correspond to vowels.
 
 const encode = (string) => {
-
+ return string.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
 };
 
 
