@@ -13,14 +13,26 @@
 
 // For the sake of simplicity, you can assume that any numbers passed into the function will correspond to vowels.
 
+// const encode = (string) => {
+//  return string.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+// };
+
+
+// const decode = (string) => {
+//   return string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+// };
+
+// more elegant solution:
+// turn vowels into numbers
 const encode = (string) => {
- return string.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
-};
+  return string.replace(/[aeiou]/g, x => '_aeiou'.indexOf(x));
+}
 
+//turn numbers back into vowels
+function decode(string){
+  return string.replace(/[1-5]/g, function (x) { return '_aeiou'.charAt(x) });
+}
 
-const decode = (string) => {
-  return string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
-};
 
 console.log(encode("all swore to enkidu"));
 console.log(decode("1ll sw4r2 t4 2nk3d5"));
