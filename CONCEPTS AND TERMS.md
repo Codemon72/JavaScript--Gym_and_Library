@@ -212,7 +212,9 @@ The `search()` method uses an expression to search for a match, and returns the 
 
 The `replace()` method returns a modified string where the pattern is replaced.
 
-source: https://www.w3schools.com/js/js_regexp.asp
+sources: 
+- https://www.w3schools.com/js/js_regexp.asp
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 Examples: 
 - more complex example in /Exercises/6_vowelCode.js
