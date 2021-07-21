@@ -12,7 +12,7 @@ const arr2 = [12, 10, 8, 12, 7, 6, 4, 10, 12, 10]
 const arr3 = [12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]
 
 const highestRank = (arr) => {
-
+  ToDo...
 }
 
 console.log(highestRank(arr1)); // --> 12
