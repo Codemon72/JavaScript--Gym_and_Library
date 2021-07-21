@@ -12,10 +12,27 @@
 
 
 const insurance = (age, size, numofdays) => {
-
+  const factorAge = (age < 25) ? 10 : 0;
+  let factorSize; 
+  switch(size) {
+    case "economy":
+      factorSize = 0;
+      break;
+    case "medium":
+      factorSize = 10
+      break;
+    case "full-size":
+      factorSize = 15;
+      break;
+    default:
+      factorSize = 15;
+  }
+  if (numofdays >= 0) {
+    return numofdays * (50 + factorAge + factorSize);
+  } else {
+    return 0;
+  }
 }
-
-
 
 console.log(insurance(18, "medium", 7)); // => 490
 console.log(insurance(30,"full-size",30)); // => 1950
