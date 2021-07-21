@@ -10,28 +10,34 @@
 
 // Note: Negative rental days should return 0 cost. Any other car size NOT listed should come with a same surcharge as the "full-size", $15.
 
+// first attempt:
+// const insurance = (age, size, numofdays) => {
+//   const factorAge = (age < 25) ? 10 : 0;
+//   let factorSize; 
+//   switch(size) {
+//     case "economy":
+//       factorSize = 0;
+//       break;
+//     case "medium":
+//       factorSize = 10
+//       break;
+//     case "full-size":
+//       factorSize = 15;
+//       break;
+//     default:
+//       factorSize = 15;
+//   }
+//   if (numofdays >= 0) {
+//     return numofdays * (50 + factorAge + factorSize);
+//   } else {
+//     return 0;
+//   }
+// }
 
 const insurance = (age, size, numofdays) => {
-  const factorAge = (age < 25) ? 10 : 0;
-  let factorSize; 
-  switch(size) {
-    case "economy":
-      factorSize = 0;
-      break;
-    case "medium":
-      factorSize = 10
-      break;
-    case "full-size":
-      factorSize = 15;
-      break;
-    default:
-      factorSize = 15;
-  }
-  if (numofdays >= 0) {
-    return numofdays * (50 + factorAge + factorSize);
-  } else {
-    return 0;
-  }
+  let ageCharge = age < 25 ? 10 : 0
+  let sizeCharge = size === 'economy' ? 0 : (size === 'medium' ? 10 : 15)
+  return numofdays < 0 ? 0 : (50 + ageCharge + sizeCharge) * numofdays
 }
 
 console.log(insurance(18, "medium", 7)); // => 490
