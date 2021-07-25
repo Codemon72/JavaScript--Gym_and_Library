@@ -16,12 +16,24 @@
 // All numbers are valid.
 // There can be duplicate letters and numbers.
 
+// work with the string
+// const lastSurvivor = (letters, coords) => {
+//   for (let i = 0; i < coords.length; i++) {
+//     letters = letters.slice(0, coords[i]) + letters.slice(coords[i] + 1, letters.length[-1])
+//   }
+//   return letters;
+// }
+
+
+// or turn it into array first and then remove elements with splice():
+
 const lastSurvivor = (letters, coords) => {
+  letters = letters.split('');
   for (let i = 0; i < coords.length; i++) {
-    letters = letters.slice(0, coords[i]) + letters.slice(coords[i] + 1, letters.length[-1])
+     letters.splice(coords[i], 1)
   }
-  return letters;
+  return letters.join('')
 }
 
-lastSurvivor("asdfghjklö", [5,4,3,2,1])
+
 console.log(lastSurvivor("asdfghjklö", [5,4,3,2,1]))
