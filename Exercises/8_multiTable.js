@@ -20,7 +20,7 @@
 const multiTable = (number) => {
   let multiString = ''; 
   for (let i = 1; i <= 10; i++) {
-    multiString += i;
+    multiString += i + ' * ' + number + ' = ' + i * number;
     if (i < 10) {
       multiString += '\n';
     }
