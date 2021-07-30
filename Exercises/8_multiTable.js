@@ -18,5 +18,15 @@
 
 
 const multiTable = (number) => {
-
+  let multiString = ''; 
+  for (let i = 1; i <= 10; i++) {
+    multiString += i;
+    if (i < 10) {
+      multiString += '\n';
+    }
+  }
+  return multiString;
 }
+
+
+console.log(multiTable(9));
