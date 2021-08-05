@@ -16,7 +16,14 @@
 // printer_error(s) => "8/22"
 
 const printerError = (s) => {
-
+  const validLetters = "abcdefghijklm";
+  let errorCounter = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (!validLetters.includes(s.charAt(i))) {
+      errorCounter ++
+    }
+  }
+  return `${errorCounter}/${s.length}`
 }
 
 console.log(printerError("aaabbbbhaijjjm")); // => "0/14"
