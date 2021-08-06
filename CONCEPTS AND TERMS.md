@@ -196,10 +196,20 @@ A regular expression can be a single character, or a more complicated pattern.
 
 Regular expressions can be used to perform all types of text search and text replace operations.
 
-- Modifiers:
-- i  - is a modifier (modifies the search to be case-insensitive).
-- g  - perform a global match (find all matches rather than stopping after the first match)
-- m	 - perform multiline matching
+###  Modifiers:
+- `i`  - is a modifier (modifies the search to be case-insensitive).
+- `g`  - perform a global match (find all matches rather than stopping after the first match)
+- `m`	 - perform multiline matching
+
+### Brackets
+Brackets are used to find a range of characters:
+
+Expression	Description
+`[abc]`	Find any character between the brackets
+`[^abc]`	Find any character NOT between the brackets
+`[0-9]`	Find any character between the brackets (any digit)
+`[^0-9]`	Find any character NOT between the brackets (any non-digit)
+`(x|y)`	Find any of the alternatives specified
 
 **Syntax**
 
