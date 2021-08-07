@@ -6,7 +6,7 @@
 
 // You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
 
-// The string has a length greater or equal to one and contains only letters from ato z.
+// The string has a length greater or equal to one and contains only letters from a to z.
 
 // Examples:
 // s="aaabbbbhaijjjm"
@@ -15,16 +15,23 @@
 // s="aaaxbbbbyyhwawiwjjjwwm"
 // printer_error(s) => "8/22"
 
-const printerError = (s) => {
-  const validLetters = "abcdefghijklm";
-  let errorCounter = 0;
-  for (let i = 0; i < s.length; i++) {
-    if (!validLetters.includes(s.charAt(i))) {
-      errorCounter ++
-    }
-  }
-  return `${errorCounter}/${s.length}`
-}
+// first solution
+// const printerError = (s) => {
+//   const validLetters = "abcdefghijklm";
+//   let errorCounter = 0;
+//   for (let i = 0; i < s.length; i++) {
+//     if (!validLetters.includes(s.charAt(i))) {
+//       errorCounter ++
+//     }
+//   }
+//   return `${errorCounter}/${s.length}`
+// }
+
+// solution using regular expression 
+// (first value is the length of a string returned from 's.replace()' with all valid letters removed; `gi` for global and case-insensitive)
+
+const printerError = s => `${s.replace(/[a-m]/gi, "").length}/${s.length}`;
+
 
 console.log(printerError("aaabbbbhaijjjm")); // => "0/14"
 console.log(printerError("aaaxbbbbyyhwawiwjjjwwm")); //=> "8/22"
