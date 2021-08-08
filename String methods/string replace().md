@@ -12,6 +12,8 @@ Searches a string for a specified value, or a "regular expression", and returns 
 
 **Note**: This method does not change the original string.
 
+**Note**: You can also use this method to remove letters or words by giving `""` as the replacement value.
+
 #### Syntax
 
 `string.replace(searchvalue, newvalue)`
