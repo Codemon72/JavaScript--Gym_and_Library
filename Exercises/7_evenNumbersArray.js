@@ -6,10 +6,14 @@
 // ([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2) => [-8, 26]
 // ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]
 
-const evenNumbers = (array, number) => {
-  let evens = array.filter(n => { return n % 2 === 0});
-  return evens.splice(-number);
-}
+// first solution:
+// const evenNumbers = (array, number) => {
+//   let evens = array.filter(n => { return n % 2 === 0});
+//   return evens.splice(-number);
+// }
+
+// more concise but maybe not as human-readable:
+const evenNumbers = (array, number) => array.filter(item => item % 2 === 0).slice(-number);
 
 
 console.table(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)) 
