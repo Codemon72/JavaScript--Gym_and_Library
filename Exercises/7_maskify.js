@@ -13,15 +13,24 @@
 // maskify("Nananananananananananananananana Batman!") == "####################################man!"
 
 const maskify = (string) => {
-
+    let array = string.split('');
+    let newArray = [];
+    for (let i = 0; i < string.length; i++) {
+        if (i < string.length -4) {
+            newArray.push('#')
+        } else {
+            newArray.push(array[i])
+        }
+    }
+    return newArray.join('');
 }
 
 
 let string = "4556364607935616";
-string = "64607935616";
-string = "1";
-string = "Skippy";
-string = "Nananananananananananananananana Batman!";
-string = ";";
+// string = "64607935616";
+// string = "1";
+// string = "Skippy";
+// string = "Nananananananananananananananana Batman!";
+// string = ";";
 
 console.log(maskify(string));
