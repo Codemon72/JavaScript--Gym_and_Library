@@ -12,18 +12,24 @@
 // maskify("Skippy")                                   == "##ippy"
 // maskify("Nananananananananananananananana Batman!") == "####################################man!"
 
+// first solution:
+// const maskify = (string) => {
+//     let array = string.split('');
+//     let newArray = [];
+//     for (let i = 0; i < string.length; i++) {
+//         if (i < string.length -4) {
+//             newArray.push('#')
+//         } else {
+//             newArray.push(array[i])
+//         }
+//     }
+//     return newArray.join('');
+// }
+
+// solution with RegEx - utilizing the dot metacharacter:
 const maskify = (string) => {
-    let array = string.split('');
-    let newArray = [];
-    for (let i = 0; i < string.length; i++) {
-        if (i < string.length -4) {
-            newArray.push('#')
-        } else {
-            newArray.push(array[i])
-        }
-    }
-    return newArray.join('');
-}
+    return string.slice(0, -4).replace(/./g, '#') + string.slice(-4);
+  }
 
 
 let string = "4556364607935616";
