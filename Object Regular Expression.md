@@ -37,8 +37,15 @@ Expression	Description
 `[^0-9]`	Find any character NOT between the brackets (any non-digit)
 `(x|y)`	Find any of the alternatives specified
 
-Also check out Metacharacters and Quantifiers: https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 
+### Metacharacters
+`.` The . metacharacter is used to find a single character, except newline or other line terminators.
+    - `exampleString.replace(/./g, '#')` - replaces all characters in a string with a hashtag
+    - `const string = "That's hot!"; const patt1 = /h.t/g;` - will return 'hat' and 'hot'
+
+### Quantifiers
+
+Metacharacters and Quantifiers: https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 
 sources: 
 - https://www.w3schools.com/jsref/jsref_obj_regexp.asp
