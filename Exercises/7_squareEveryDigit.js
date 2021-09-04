@@ -5,8 +5,12 @@
 // Note: The function accepts an integer and returns an integer
 
 
-const squareDigits = () => {
-
+const squareDigits = (num) => {
+    // make array from number
+    const numAsArray = String(num).split('');
+    console.log(numAsArray);
 }
 
-console.log(squareDigits(9119)) // => 811181
+const num = 9119;
+squareDigits(num);
+// console.log(squareDigits(9119)) // => 811181
