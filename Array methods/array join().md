@@ -18,6 +18,10 @@ Parameters
 
 **Return Value**:	A String, representing the array values, separated by the specified separator.
 
+source: 
+- https://www.w3schools.com/jsref/jsref_join.asp
+
+
 **Example**
 
 ```

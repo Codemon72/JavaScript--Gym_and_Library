@@ -8,10 +8,11 @@
 const squareDigits = (num) => {
     // make array from number
     const numAsArray = String(num).split('');
-    
-    console.log(numAsArray);
+    // square each number in array
+    const numAsArraySquared = numAsArray.map(x => x * x);
+    // concatenate to integer
+    return parseInt(numAsArraySquared.join(''));
 }
 
-const num = 9119;
-squareDigits(num);
-// console.log(squareDigits(9119)) // => 811181
+
+console.log(squareDigits(9119)) // => 811181
