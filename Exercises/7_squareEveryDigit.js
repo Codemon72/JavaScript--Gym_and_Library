@@ -8,6 +8,7 @@
 const squareDigits = (num) => {
     // make array from number
     const numAsArray = String(num).split('');
+    
     console.log(numAsArray);
 }
 
