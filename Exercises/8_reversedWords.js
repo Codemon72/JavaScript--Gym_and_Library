@@ -7,9 +7,12 @@
 
 const reverseWords = (str) => {
   // turn into array
+  let tempArray = str.split(' ');
   // reverse array
+  let tempReversed = tempArray.reverse();
   // turn back into string
-  return str;
+  let reversedStr = tempReversed.join(' ')
+  return reversedStr;
 }
 
 const str = "The greatest victory is that which requires no battle";
