@@ -6,6 +6,9 @@
 
 
 const reverseWords = (str) => {
+  // turn into array
+  // reverse array
+  // turn back into string
   return str;
 }
 
