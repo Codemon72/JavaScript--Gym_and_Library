@@ -211,6 +211,13 @@ Expression	Description
 `[^0-9]`	Find any character NOT between the brackets (any non-digit)
 `(x|y)`	Find any of the alternatives specified
 
+
+### Metacharacters
+`\d`	Find a digit	
+`\s`	Find a whitespace character	
+`\b`	Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b	
+`\uxxxx`	Find the Unicode character specified by the hexadecimal number xxxx
+
 **Syntax**
 
 `/pattern/modifiers;`
