@@ -20,6 +20,6 @@ const reverseWords = (str) => {
   return str.split(' ').reverse().join(' ');
 };
 
-const str = "The greatest victory is that which requires no battle";
+const str = 'The greatest victory is that which requires no battle';
 
 console.log(reverseWords(str));

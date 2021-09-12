@@ -5,10 +5,10 @@
 // }
 
 // solution with regular expression
-const noSpace = (x) =>{
+const noSpace = (x) => {
   return x.replace(/\s/g, '');
-}
+};
 
-const quote = "There is nothing permanent except change"; 
+const quote = 'There is nothing permanent except change';
 
 console.log(noSpace(quote)); // "Thereisnothingpermanentexceptchange"
