@@ -1,3 +1,30 @@
+### Arguments vs Parameters
+are often interchangeably used but there is a subtle difference:
+- Parameters are variables listed as a part of the function definition.
+- Arguments are values passed to the function when it is invoked.
+
+Example:
+```js
+// Basic function with three parameters that logs the sum of all the parameters
+function argCheck(param1, param2, param3){
+  console.log(param1 + param2 + param3);
+}
+
+// Function with extra arguments
+argCheck(1,2,3,4);
+// => 6 (1 + 2 + 3, ignores 4)
+
+// Function with missing arguments
+argCheck(1,2);
+// => NaN because by default if a corresponding argument is missing, it is set to undefined. 
+// param3 is assigned undefined and so 1+2+undefined = NaN
+
+// Note that, no error is thrown
+```
+for a deeper dive: https://codeburst.io/parameters-arguments-in-javascript-eb1d8bd0ef04
+____ 
+
+
 ## Data Types, Conversion and Coercion
 ### Data Types
 Basically there are 2 data types:
