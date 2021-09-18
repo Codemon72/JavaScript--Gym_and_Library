@@ -6,7 +6,7 @@ are often interchangeably used but there is a subtle difference:
 Example:
 ```js
 // Basic function with three parameters that logs the sum of all the parameters
-function argCheck(param1, param2, param3){
+const argCheck = (param1, param2, param3) => {
   console.log(param1 + param2 + param3);
 }
 
@@ -35,9 +35,9 @@ Basically there are 2 data types:
   - Note: `typeof Null` will return: 'Object' but this is basically a bug in JavaScript. Google it.
 - **Reference Data Types / Objects**
   - accessed by reference
-  - objects that are store on the heap
+  - objects that are stored on the heap
   - pointer to a location in memory
-  - Array, Object Literal, Function, Date, Anything Else...
+  - Array, Object Literal, Function, Date, anything else...
 
 #### Type Conversion
 ```js
@@ -111,10 +111,9 @@ ___
 
 
 ### Scope
-
 Global Scope
 Function Scope
-Block Scope - e.g inside curly brackets of an if statement. Same named globally with `var` declared variable will be overwritten here
+Block Scope - e.g inside curly brackets of an if statement. Same named globally with `var` declared variable will be overwritten here.
 
 reference: https://developer.mozilla.org/en-US/docs/Glossary/Scope
 ___
@@ -217,8 +216,9 @@ ___
 
 
 #### Method
-
 A method is a function stored as a property (in an object).
+___
+
 
 #### CommonJS
 As for what CommonJS is: CommonJS was an effort to define common standards for the various competing server-side JavaScript environments that existed at the time (including well-known but now mostly obsolete stuff like Rhino as well as a few lesser known alternatives to Node that have died out). Node mostly won, so the new common standard is "whatever Node does".
@@ -229,6 +229,7 @@ That said, if you write code today, just use either Node-style imports directly 
 
 source: https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 ___
+
 
 ### import vs require
 Is there any important difference between import and require ?
