@@ -30,5 +30,15 @@ Example:
 
 ```
 
-### Json file
+### JSON file
 - if you create a `.json` file it will automatically put everything into a string. (It knows it's a JSON file.)
+- you can't make comments in a JSON file - a workaround could be as data:
+```json
+{
+   "_comment1_": "this is my comment",
+   "sport": "basketball",
+   "coach": "Joe Smith",
+   "wins": 15,
+   "losses": 5
+}
+```
