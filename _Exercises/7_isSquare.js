@@ -4,15 +4,15 @@
 
 // The tests will always use some integral number, so don't worry about that in dynamic typed languages.
 
-const isSquare = (n) => {
-  return 'blib'
+const isSquare = (num) => {
+  return Number.isInteger(Math.sqrt(num))
 }
 
 let num = -1  // =>  false
-// num =  0  // =>  true
+num =  0  // =>  true
 // num =  3  // =>  false
-// num =  4  // =>  true
-// num = 25  // =>  true
+num =  4  // =>  true
+num = 25  // =>  true
 // num = 26  // =>  false
 
 console.log(isSquare(num))
