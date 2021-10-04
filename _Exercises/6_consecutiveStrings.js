@@ -23,8 +23,15 @@
 
 const longestConsec = (strarr, k) => {
   let longestConcat = '';
-  // loop over array and make concatenations
-  // return first and longest concatenation
+  let temp = ''
+  for (let i = 0; i < strarr.length -1; i++) {
+    // concatenate k array elements
+    temp = strarr[i] + strarr[i + 1]
+    if (longestConcat.length < temp.length) {
+      longestConcat = strarr[i] + strarr[i + 1]
+    }
+  }
+  return longestConcat
 }
 
 const strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2;
