@@ -12,7 +12,7 @@
 // abcdefuvwxyz ("      12)  concatenation of strarr[4] and strarr[5]
 
 // Two strings are the longest: "folingtrashy" and "abcdefuvwxyz".
-// The first that came is "folingtrashy" so 
+// The first that came is "folingtrashy" so
 // longest_consec(strarr, 2) should return "folingtrashy".
 
 // In the same way:
@@ -20,36 +20,37 @@
 
 // n being the length of the string array, if n = 0 or k > n or k <= 0 return "".
 
-
-const longestConsec = (strarr, k) => {
-  let longestConcat = '';
-  let temp = ''
-  for (let i = 0; i < strarr.length - (k - 1); i++) {
-    for (let j = 0; j < k; j++) {
-      temp += strarr[i + j]
-    }
-    if (longestConcat.length < temp.length) {
-      longestConcat = temp
-    }
-    temp = ''
-  }
-  return longestConcat
-}
-
-// highest voted solution on platform:
-
-// function longestConsec(strarr, k) {
-//   var longest = "";
-//   for(var i=0;k>0 && i<=strarr.length-k;i++){
-//     var tempArray = strarr.slice(i,i+k);
-//     var tempStr = tempArray.join("");
-//     if(tempStr.length > longest.length){
-//       longest = tempStr;
+// first solution:
+// const longestConsec = (strarr, k) => {
+//   let longestConcat = '';
+//   let temp = ''
+//   for (let i = 0; i < strarr.length - (k - 1); i++) {
+//     for (let j = 0; j < k; j++) {
+//       temp += strarr[i + j]
 //     }
+//     if (longestConcat.length < temp.length) {
+//       longestConcat = temp
+//     }
+//     temp = ''
 //   }
-//   return longest;
+//   return longestConcat
 // }
 
-const strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 3;
+// more elegant
+
+const longestConsec = (strarr, k) => {
+  let longest = '';
+  for (let i = 0; k > 0 && i <= strarr.length - k; i++) {
+    let tempArr = strarr.slice(i, i + k);
+    let tempStr = tempArr.join('');
+    if (tempStr.length > longest.length) {
+      longest = tempStr;
+    }
+  }
+  return longest;
+};
+
+const strarr = ['tree', 'foling', 'trashy', 'blue', 'abcdef', 'uvwxyz'],
+  k = 3;
 
 console.log(longestConsec(strarr, k));
