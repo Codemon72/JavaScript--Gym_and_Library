@@ -6,11 +6,14 @@ The Document method querySelector() **returns the first Element within the docum
 #### Syntax
 `element = document.querySelector(selectors);`
 
-Parameters
+### Parameters
 - selectors
   A DOMString selecting a DOM element in the same syntax as in a CSS file.
 
-Example:
+### Return Value
+A NodeList object, representing the first element that matches the specified CSS selector(s). If no matches are found, null is returned. Throws a SYNTAX_ERR exception if the specified selector(s) is invalid.
+
+### Example:
 ```js
 const el = document.querySelector("div.user-panel.main input[name='login']");
 ``` 
