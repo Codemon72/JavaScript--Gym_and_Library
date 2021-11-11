@@ -9,7 +9,7 @@
 // For this example, solve("aabcdefg","fbd") = 5. Also, solve("xyz","yxxz") = 0, because we cannot get second string from the first since the second string is longer.
 
 const solve = (a, b) => {
-//  
+//  ToDo
 }
 
 
