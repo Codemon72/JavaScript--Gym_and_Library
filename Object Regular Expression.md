@@ -14,17 +14,22 @@ In JS regular expressions are objects.
 
 `/pattern/modifiers;`
 
-- Using String Methods
-In JavaScript, regular expressions are often used with the two string methods: `search()` and `replace()`.
+### Using String Methods
+In JavaScript, regular expressions are often used with the these string methods: 
 
-The `search()` method uses an expression to search for a match, and returns the position of the match.
+- The `match()` method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+- The `replace()` method returns a modified string where the pattern is replaced.
+- The `search()` method uses an expression to search for a match, and returns the position of the match.
 
-The `replace()` method returns a modified string where the pattern is replaced.
 
-###  Modifiers:
+### Character Classes
+`s` - white space
+`S` - not white space
+
+###  Pattern Modifiers:
 - `i`  - is a modifier (modifies the search to be case-insensitive).
 - `g`  - perform a global match (find all matches rather than stopping after the first match)
-- `m`	 - perform multiline matching
+- `m`  - perform multiline matching
 
 ### Brackets
 Brackets are used to find a range of characters:
@@ -36,6 +41,8 @@ Expression	Description
 `[0-9]`	Find any character between the brackets (any digit)
 `[^0-9]`	Find any character NOT between the brackets (any non-digit)
 `(x|y)`	Find any of the alternatives specified
+`/\w+/` any alpahnumerical character (a to z, A to Z, 0 to 9). Same as [a-zA-Z0-9].
+`/\W+/` anything that is NOT an alphanumerical character. Same as [^a-zA-Z0-9].
 
 
 ### Metacharacters
@@ -44,6 +51,8 @@ Expression	Description
     - `const string = "That's hot!"; const patt1 = /h.t/g;` - will return 'hat' and 'hot'
 
 ### Quantifiers
+`*` - 0 or more
+`+` - 1 or more
 
 Metacharacters and Quantifiers: https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 
@@ -51,6 +60,11 @@ sources:
 - https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 - https://www.w3schools.com/js/js_regexp.asp
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+cheat-sheets:
+- https://cheatography.com/davechild/cheat-sheets/regular-expressions/
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+
 
 Examples: 
 - more complex example in /Exercises/6_vowelCode.js
