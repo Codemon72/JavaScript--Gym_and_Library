@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/59fab1f0c9fc0e7cd4000072/train/javascript
-// https://www.youtube.com/watch?v=unm0BLor8aE&t=0s
 // https://shiffman.net/a2z/text-analysis/
+// https://www.youtube.com/watch?v=tE-ZYXU8A8U&list=PLRqwX-V7Uu6bZQkJcGM5S9fn9R9Yyd8iZ
 
 // In this Kata, we are going to see how a Hash (or Map or dict) can be used to keep track of characters in a string.
 
@@ -10,6 +10,22 @@
 
 const solve = (a, b) => {
 //  ToDo
+}
+
+let dict = {};
+
+const charCounting = () => {
+  for (let i = 0; i < text.length; i++) {
+    // if text.charAt(i) is not present in dict -> insert it with 1
+    if (!dict[text.charAt(i)]) {
+      dict[text.charAt(i)] = 1;
+    } 
+    // if text.charAt(i) is present in dict -> add +1
+    else if (dict[text.charAt(i)]) {
+      dict[text.charAt(i)] +=1 ;
+    }
+  }
+  console.log(dict)
 }
 
 

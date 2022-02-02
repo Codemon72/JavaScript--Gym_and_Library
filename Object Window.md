@@ -11,7 +11,7 @@ window.outerHeight
 window.outerWidth
 
 // Inner Height and Width
-window.innerHeight
+window.innerHeight // example below
 window.innerWidth
 
 // Scroll points
@@ -68,3 +68,10 @@ if (confirm('Are you sure?')) {
 
 `Window.prompt()`
 Returns the text entered by the user in a prompt dialog.
+
+
+### Examples
+```js
+// in the head:
+document.documentElement.style.setProperty('--window-height', window.innerHeight + 'px');
+```

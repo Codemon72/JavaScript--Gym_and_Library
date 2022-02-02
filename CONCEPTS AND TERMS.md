@@ -83,6 +83,20 @@ console.log(typeof sum) // -> string
 ___
 
 
+### Hash / Map / Dict / Hashmap / Associative Array
+```js
+let dict = {};
+let word = "example";
+dict[word] = 12;
+```
+ToDo
+https://shiffman.net/a2z/text-analysis/
+https://www.youtube.com/watch?v=_5jdE6RKxVk&list=PLRqwX-V7Uu6bZQkJcGM5S9fn9R9Yyd8iZ&index=2
+https://www.w3schools.com/js/js_arrays.asp
+// https://www.youtube.com/watch?v=tE-ZYXU8A8U&list=PLRqwX-V7Uu6bZQkJcGM5S9fn9R9Yyd8iZ
+___
+
+
 ### HTMLCollection
 An HTMLCollection object is an _array-like_ list of HTML elements.
 
