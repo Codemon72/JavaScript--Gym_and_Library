@@ -49,8 +49,10 @@ Expression	Description
 `.` The . metacharacter is used to find a single character, except newline or other line terminators.
     - `exampleString.replace(/./g, '#')` - replaces all characters in a string with a hashtag
     - `const string = "That's hot!"; const patt1 = /h.t/g;` - will return 'hat' and 'hot'
-
-### Special Characters
+`\d` - Find a digit
+`\D` - Find a non-digit character
+`\s` - Find a whitespace character
+`\S` - Find a non-whitespace character
 `\n` - end of line (in Unix and Unix-like systems - \r means nothing special)
 `\r` - carriage return (end of line on old Mac systems (pre-OS X))
         - deep dive of difference between \n and \r: https://stackoverflow.com/questions/1761051/difference-between-n-and-r#answer-1761086
@@ -79,5 +81,10 @@ const wordArray = text.match(/\S+/g);
 
 // extract all white spaces
 const allCharactersNoSpaces = text.replace(/\s+/g, '')
+
+// remove all numbers from a string
+const stringClean = (s) => {
+  return s.replace(/[0-9]/g, '')
+}
 ```
 - more complex example in /Exercises/6_vowelCode.js
