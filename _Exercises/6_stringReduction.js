@@ -10,9 +10,13 @@
 
 const solve = (a, b) => {
 //  ToDo
+console.log(text);
 }
 
 let dict = {};
+
+const text = "Zu Dionys, dem Tyrannen, schlich Damon, den Dolch im Gewande: Ihn schlugen die Häscher in Bande, »Was wolltest du mit dem Dolche? sprich!« Entgegnet ihm finster der Wüterich. »Die Stadt vom Tyrannen befreien!« »Das sollst du am Kreuze bereuen.«"
+
 
 const charCounting = () => {
   for (let i = 0; i < text.length; i++) {
@@ -29,10 +33,10 @@ const charCounting = () => {
 }
 
 
-console.log(solve("xyz","yxz")); // => 0
-console.log(solve("abcxyz","ayxz"));// => 2
-console.log(solve("abcdexyz","yxz")); // => 5
-console.log(solve("axyyz","yxxz")); // => 0
-console.log(solve("abdegfg","ffdb")); // => 0
-console.log(solve("aabcdefg","fbd")); // => 5
-console.log(solve("aabcdefg","fdb")); // => 5
+// console.log(solve("xyz","yxz")); // => 0
+// console.log(solve("abcxyz","ayxz"));// => 2
+// console.log(solve("abcdexyz","yxz")); // => 5
+// console.log(solve("axyyz","yxxz")); // => 0
+// console.log(solve("abdegfg","ffdb")); // => 0
+// console.log(solve("aabcdefg","fbd")); // => 5
+// console.log(solve("aabcdefg","fdb")); // => 5
