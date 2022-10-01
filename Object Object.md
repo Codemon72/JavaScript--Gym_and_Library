@@ -43,9 +43,9 @@ or
 `objectName["propertyName"]`
 
 
-### How to check if value exists in object?
+### How to check if key exists in object?
 ```js
-let exists = Object.values(exampleObject).includes('example');
+let exists = Object.keys(exampleObject).includes('example');
 ```
 
 #### Object Spreading

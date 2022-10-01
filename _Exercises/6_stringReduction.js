@@ -10,26 +10,9 @@
 
 const solve = (a, b) => {
 //  ToDo
+// make a map of a and a map of b
+// compare both maps
 console.log(text);
-}
-
-let dict = {};
-
-const text = "Zu Dionys, dem Tyrannen, schlich Damon, den Dolch im Gewande: Ihn schlugen die Häscher in Bande, »Was wolltest du mit dem Dolche? sprich!« Entgegnet ihm finster der Wüterich. »Die Stadt vom Tyrannen befreien!« »Das sollst du am Kreuze bereuen.«"
-
-
-const charCounting = () => {
-  for (let i = 0; i < text.length; i++) {
-    // if text.charAt(i) is not present in dict -> insert it with 1
-    if (!dict[text.charAt(i)]) {
-      dict[text.charAt(i)] = 1;
-    } 
-    // if text.charAt(i) is present in dict -> add +1
-    else if (dict[text.charAt(i)]) {
-      dict[text.charAt(i)] +=1 ;
-    }
-  }
-  console.log(dict)
 }
 
 
