@@ -17,7 +17,8 @@ const dict = {};
 
 const text = "Zu Dionys, dem Tyrannen, schlich Damon, den Dolch im Gewande: Ihn schlugen die Häscher in Bande, »Was wolltest du mit dem Dolche? sprich!« Entgegnet ihm finster der Wüterich. »Die Stadt vom Tyrannen befreien!« »Das sollst du am Kreuze bereuen.« blib der Wüterich die Stadt vom blib blib"
 
-const arrayOfWords = text.split(" ");
+
+const arrayOfWords = text.replace(/[,]|[.]|[:]|[?]|[»]|[«]|[!]/g, '').split(" ");
 
 for(let i = 0; i < arrayOfWords.length; i++) {
   word = arrayOfWords[i] 
