@@ -97,6 +97,34 @@ https://www.w3schools.com/js/js_arrays.asp
 ___
 
 
+### Events and Handler
+
+#### HTML Events
+An HTML event can be something the browser does, or something a user does.
+- onchange	- An HTML element has been changed
+- onclick	- The user clicks an HTML element
+- onmouseover	- The user moves the mouse over an HTML element
+- onmouseout	- The user moves the mouse away from an HTML element
+- onkeydown	- The user pushes a keyboard key
+- onload	- The browser has finished loading the page
+- keypress - The event occurs when the user presses a key
+
+Examples: 
+
+Event: pressing 'Enter'
+```s
+// in html:
+<input type="text" onkeypress="handlePressEnter(event)">
+
+// in JS:
+const handlePressEnter = (event) => {
+    if (event.key === 'Enter'){
+      alert('Yay')
+    }
+  }
+```
+___
+
 ### HTMLCollection
 An HTMLCollection object is an _array-like_ list of HTML elements.
 

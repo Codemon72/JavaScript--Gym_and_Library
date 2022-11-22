@@ -34,7 +34,11 @@ https://www.w3schools.com/jsref/jsref_operators.asp
 `===`   equal value and equal type // 'identity operator'
 `!==` 	not equal value and / or not equal type
 
-#### Conditional (Terniary) Operator
+#### Logical Operators
+
+`&&`, `||` and `!` // 'and', 'or' and 'not'
+
+##### Conditional Ternary Operator
  
 ```js
 number > 5 
@@ -57,9 +61,6 @@ const canYouHaveBeer = (age) => {
     : alert(“Sorry young gun. How about a soda?”)
 }
 
-#### Logical Operators
-
-`&&`, `||` and `!` // 'and', 'or' and 'not'
 
 #### Spread Operator
 
