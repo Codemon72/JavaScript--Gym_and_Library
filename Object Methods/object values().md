@@ -1,4 +1,13 @@
-converts property values into array
+The Object.values() method returns an array of a given object's property values.
+
+### Syntax
+`Object.values(exampleObj)`
+
+### Parameters
+- exampleObj - an object.
+
+### Return value
+An array containing the given object's own enumerable string-keyed property values.
 
 Example:
 ```js
