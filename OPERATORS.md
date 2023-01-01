@@ -60,6 +60,7 @@ const canYouHaveBeer = (age) => {
     : age === 17 alert(“So close! But unfortunately, not yet.”)
     : alert(“Sorry young gun. How about a soda?”)
 }
+```
 
 
 #### Spread Operator
