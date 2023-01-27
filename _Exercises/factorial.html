@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+  </head>
+  <body>
+    <script>
+      // Example of recursive (calling on itself) function
+
+      // Faktorial (dt: Fakultät)
+      // A factorial is the product of an integer and all the integers below it.
+      // In mathematics, the factorial of a non-negative integer n!, is the product of all positive integers less than or equal to n.
+      // Syntax in mathematics: n!
+      // example: faktorial of 5 = 5 * 4 * 3 * 2 * 1 = 120
+
+      const factorialRecursive = (n) => {
+        if (n === 0) {
+          return 1
+        }
+        // functions recursively calls on itself
+        // result is almost instantaneous (opposed to for loop)
+        return n * factorialRecursive(n - 1)
+      }
+
+      const factorialWithForLoop = (n) => {
+        if (n === 0) {
+          return 1
+        }
+        
+        let factorial = n
+
+        for (let i = n; i >= 2; i--) {
+          factorial *= i - 1
+        }
+
+        // or counting upwards:
+        // for (let i = 1; i < n; i++) {
+        //   factorial *= i
+        // }
+
+        return factorial
+      }
+
+      console.log(factorialRecursive(5))
+      // console.log(factorialWithForLoop(5))
+    </script>
+  </body>
+</html>
