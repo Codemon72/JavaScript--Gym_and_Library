@@ -17,6 +17,7 @@
       // example: faktorial of 5 = 5 * 4 * 3 * 2 * 1 = 120
 
       const factorialRecursive = (n) => {
+        // the factorial of '0' is 1 (not sure of by convention or logic)
         if (n === 0) {
           return 1
         }
@@ -26,10 +27,11 @@
       }
 
       const factorialWithForLoop = (n) => {
+        // the factorial of '0' is 1 (not sure of by convention or logic)
         if (n === 0) {
           return 1
         }
-        
+
         let factorial = n
 
         for (let i = n; i >= 2; i--) {
@@ -44,8 +46,8 @@
         return factorial
       }
 
-      console.log(factorialRecursive(5))
-      // console.log(factorialWithForLoop(5))
+      console.log(factorialRecursive(3))
+      // console.log(factorialWithForLoop(3))
     </script>
   </body>
 </html>

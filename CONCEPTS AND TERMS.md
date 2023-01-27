@@ -252,6 +252,51 @@ if (variableX == null) {
 ___
 
 
+### recursive
+
+A recursive function is a function that calls itself until it doesn’t. And this technique is called recursion.
+
+A recursive function always has a condition to stop calling itself. Otherwise, it will call itself indefinitely. 
+
+Examples:
+count down from n:
+```js
+function countDown(n) {
+    console.log(n);
+
+    let nextNumber = n - 1;
+
+    if (nextNumber > 0) {
+        countDown(nextNumber);
+    }
+}
+countDown(3);
+```
+calculate the sum of natural numbers from 1 to n:
+```js
+function sum(n) {
+  if (n <= 1) {
+    return n;
+  }
+  return n + sum(n - 1);
+}
+```
+calculate factorial of n:
+```js
+const factorial = (n) => {
+  // the factorial of '0' is 1 (not sure of by convention or logic)
+  // this is also needed to stop the recursion
+  if (n === 0) {
+    return 1
+  }
+  // functions recursively calls on itself (until `n === 0`)
+  // result is almost instantaneous (opposed to for loop)
+  return n * factorial(n - 1)
+}
+```
+___
+
+
 #### Regular Expression
 see under: 'Object Regular Expression.md'
 ___
