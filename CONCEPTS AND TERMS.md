@@ -252,7 +252,7 @@ if (variableX == null) {
 ___
 
 
-### recursive
+### recursion / recursive
 
 A recursive function is a function that calls itself until it doesn’t. And this technique is called recursion.
 
@@ -294,6 +294,7 @@ const factorial = (n) => {
   return n * factorial(n - 1)
 }
 ```
+useful source: https://www.javascripttutorial.net/javascript-recursive-function/
 ___
 
 
