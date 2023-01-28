@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome</title>
+</head>
+<body>
+  A palindrome is a word, phrase, number, or other sequence of symbols or elements, whose meaning may be interpreted the same way in either forward or reverse direction. Famous examples include "Amore, Roma", "A man, a plan, a canal: Panama" and "No 'x' in 'Nixon'". - wikipedia
+
+Our goal is to determine whether or not a given string is a valid palindrome or not.
+
+Like the above examples, here are a few test cases which are also populated:
+
+"Amore, Roma" => valid
+"A man, a plan, a canal: Panama" => valid
+"No 'x' in 'Nixon'" => valid
+"Abba Zabba, you're my only friend" => invalid
+You can see that they are case insensitive and disregards non alphanumeric characters. In addition to a few predefined tests, your function will also be tested against a random string generator 50 times which are guaranteed to produce valid palindromes.
+
+Notes:
+
+The empty string "" can be read forward or backward the same, it's a palindrome in our case.
+  
+<script>
+  // First attempt:
+  // const palindrome = (string) => {
+  //   return string === '' 
+  //     ? true 
+  //     : String(string).match(/[A-Za-z0-9]/g).join('').toLowerCase().split('').reverse().join('') === String(string).match(/[A-Za-z0-9]/g).join('').toLowerCase().split('').join('')
+  // }
+
+  // Cleaner solution:
+  function palindrome(string) {
+    const notLettersNotNumbers = /[^A-Za-z0-9]/g;
+    const cleanString = string.toLowerCase().replace(notLettersNotNumbers, '');
+    const invString = [...cleanString].reverse().toString().replace(notLettersNotNumbers, '');
+    return cleanString === invString ?  true : false;
+  }
+
+  console.log('Abba Zabba: ', palindrome("Abba0,.-_ Zabba, you're my only friend"))
+  console.log('Abba: ', palindrome("Abba"))
+  console.log('101: ', palindrome('101'))
+  console.log('empty string: ', palindrome(''))
+  console.log('Under_scores; Serocsrednu: ', palindrome('Under_scores; Serocsrednu'))
+</script>
+</body>
+</html>
