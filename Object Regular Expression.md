@@ -41,8 +41,8 @@ Expression	Description
 `[0-9]`	Find any character between the brackets (any digit)
 `[^0-9]`	Find any character NOT between the brackets (any non-digit)
 `(x|y)`	Find any of the alternatives specified
-`/\w+/` any alpahnumerical character (a to z, A to Z, 0 to 9). Same as [a-zA-Z0-9].
-`/\W+/` anything that is NOT an alphanumerical character. Same as [^a-zA-Z0-9].
+`/\w/` any alpahnumerical character (a to z, A to Z, 0 to 9) and underscore (_). Same as [a-zA-Z0-9_].
+`/\W/` anything that is NOT an alphanumerical character or underscore. Same as [^a-zA-Z0-9_].
 
 
 ### Metacharacters
