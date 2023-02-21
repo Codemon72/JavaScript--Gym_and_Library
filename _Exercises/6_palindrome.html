@@ -36,7 +36,7 @@ The empty string "" can be read forward or backward the same, it's a palindrome 
     const notLettersNotNumbers = /[^A-Za-z0-9]/g;
     const cleanString = string.toLowerCase().replace(notLettersNotNumbers, '');
     const invString = [...cleanString].reverse().toString().replace(notLettersNotNumbers, '');
-    return cleanString === invString ?  true : false;
+    return cleanString === invString ? true : false;
   }
 
   console.log('Abba Zabba: ', palindrome("Abba0,.-_ Zabba, you're my only friend"))
