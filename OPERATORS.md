@@ -62,6 +62,13 @@ const canYouHaveBeer = (age) => {
 }
 ```
 
+Beware: a ternary expression is **not** a replacement for an if/else construct - **it's an equivalent to an if/else construct that returns a value**. That is, an if/else clause is code, a ternary expression is an expression, meaning that it returns a value.
+
+This means several things:
+- use ternary expressions only when you have a variable on the left side of the `=` that is to be assigned the return value
+- only use ternary expressions when the returned value is to be one of two values (or use nested expressions if that is fitting)
+- each part of the expression (after ? and after : ) should return a value without side effects 
+
 
 #### Spread Operator
 
