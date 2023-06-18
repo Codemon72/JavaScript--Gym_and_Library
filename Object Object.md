@@ -49,13 +49,15 @@ let exists = Object.keys(exampleObject).includes('example');
 ```
 
 #### Object Spreading
-
+```js
 // spread operator in arrays:
 let example1 = [1,2,3,4,5,6];
-**let example2 = [...example1];**
+let example2 = [...example1];
 example2.push(true);
 
 console.log(example1); // -> [1,2,3,4,5,6]
+
+// ----
 
 // Object Spreading: 
 const person = { name: 'Ansgar', age: 25 }
@@ -63,13 +65,29 @@ const person2 = {}
 person2.name = person.name;
 person2.age = person.age + 1;
 
-
 const person2b = {
   name: person.name,
   age: person.age + 1,
 };
 
-
-**const person2c = { ...person };**
+const person2c = { ...person };
 person2c.age = person.age + 1;
-**const person2d = { ...person, age: person.age + 1 };**
+const person2d = { ...person, age: person.age + 1 };
+
+// ----
+
+// Return the highest and lowest number from a number string
+let numberString = "1 2 -3 4 5";
+
+function highAndLow(numberString) {
+  // Split the numbers string into an array of individual number strings
+  numberArray = numberString.split(' ');
+
+  // Math.max() returns the maximum number from the array
+  // Math.min() returns the minimum number from the array
+  // The spread syntax (...) spreads the array elements as individual arguments
+  return `${Math.max(...numberArray)} ${Math.min(...numberArray)}`;
+}
+
+console.log(highAndLow(numberString));
+```

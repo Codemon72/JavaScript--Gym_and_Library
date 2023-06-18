@@ -9,7 +9,7 @@ The every() method executes the function once for each element present in the ar
 
 **Note**: every() does not change the original array
 
-Return value: A Boolean. Returns true if all the elements in the array pass the test, otherwise it returns false
+**Return value**: A Boolean. Returns true if all the elements in the array pass the test, otherwise it returns false
 
 Example:
 
