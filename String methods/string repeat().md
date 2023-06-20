@@ -12,3 +12,12 @@ Parameters
 **Return Value**:	A String, a new string containing copies of the original string.
 
 source: https://www.w3schools.com/jsref/jsref_repeat.asp
+
+### Examples
+
+```js
+// from calling the function with this string: accum("RqaEzty") -> this result is expected: "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+function accum(s) {
+	return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
+```

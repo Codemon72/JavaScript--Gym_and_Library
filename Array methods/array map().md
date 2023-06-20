@@ -22,7 +22,7 @@ If this parameter is empty, the value "undefined" will be passed as its "this" v
 
 Examples:
 
-```
+```js
 // Direct use of the existing function
 var a = [1, 4, 9, 16];
 var b = a.map(Math.sqrt);
@@ -51,4 +51,10 @@ var a=[2, 4, 6, 8];
 var b=a.map((_,i,arr)=>arr[arr.length-1-i]);
 console.log(a);   //output: [ 2, 4, 6, 8 ]
 console.log(b);   //output: [ 8, 6, 4, 2 ]
+
+
+// from calling the function with this string: accum("RqaEzty") -> this result is expected: "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+function accum(s) {
+	return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
 ```
