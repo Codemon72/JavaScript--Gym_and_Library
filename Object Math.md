@@ -28,7 +28,20 @@ Returns the value of the number x rounded to the nearest integer.
 `Math.sqrt(x)`
 Returns the positive square root of x.
 
+`Math.abs(x)`
+Returns the absolute value of a number. (Always positive).
+
 
 sources: 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 https://www.w3schools.com/jsref/jsref_obj_math.asp
+
+
+### Examples
+
+```js
+// you are given a number and have to make it negative. The number can be negative already, in which case no change is required.
+function makeNegative(num) {
+  return -Math.abs(num);
+}
+```
