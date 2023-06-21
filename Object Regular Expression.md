@@ -86,5 +86,10 @@ const allCharactersNoSpaces = text.replace(/\s+/g, '')
 const stringClean = (s) => {
   return s.replace(/[0-9]/g, '')
 }
+
+// count all vowels in a string
+function getCount(str) {
+  return (str.match(/[aeiou]/g) || []).length
+}
 ```
 - more complex example in /Exercises/6_vowelCode.js

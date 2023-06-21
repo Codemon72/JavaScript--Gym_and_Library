@@ -21,4 +21,4 @@ console.log(ages.filter(checkAdult));
 // output: [32, 33, 40];
 ```
 
-for more bits and bobs check w3schools: https://www.w3schools.com/jsref/jsref_filter.asp
+sources: https://www.w3schools.com/jsref/jsref_filter.asp

@@ -2,7 +2,7 @@ The `match()` method searches a string for a match against a regular expression,
 
 Note: If the regular expression does not include the g modifier (to perform a global search), the `match()` method will return only the first match in the string.
 
-This method returns null if no match is found.
+Note: This method returns `null` (not `[]` or `0`) if no match is found!!
 
 ### Syntax
 `string.match(regexp)`
@@ -18,6 +18,11 @@ This method returns null if no match is found.
 ```js
 let str = "The rain in SPAIN stays mainly in the plain";
 str.match(/ain/g)   // Returns ain,ain,ain
+
+// count all vowels in a string
+function getCount(str) {
+  return (str.match(/[aeiou]/g) || []).length
+}
 ``` 
 
 
