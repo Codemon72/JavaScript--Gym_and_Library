@@ -8,28 +8,13 @@
 </head>
 <body>
   <script>
-    function accum(s) {
-    	let result = ""
-    	for (let i = 0; i < s.length; i++){
-      	result += s[i].toUpperCase();
-
-        if (i > 0) {
-          for (let j = 0; j < i; j++){
-            result += s[i].toLowerCase()
-          }
-        }
-
-        if (i < s.length -1){
-          result += '-'
-        }
-        
-      }
-      return result
+    function sumTwoSmallestNumbers(numbers) {  
+      //Code here
+      // get the 2 lowest numbers
+      let twoLowest = [];
+      return numbers.sort((a,b) => a - b)[0] + numbers.sort((a,b) => a - b)[1]
     }
-    
-    accum("RqaEzty")
-    
-    // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+    console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]))
   </script>
 </body>
 </html>
