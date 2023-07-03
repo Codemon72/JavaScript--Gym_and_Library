@@ -8,7 +8,7 @@ The substr() method extracts parts of a string, beginning at the character at th
 
 `string.substr(start, length)`
 
-Parameters:
+### Parameters:
 
 **start** 	
 - Required. The position where to start the extraction. First character is at index 0.
@@ -25,3 +25,12 @@ Parameters:
 **Return Value**:	A new String, containing the extracted part of the text. If length is 0 or negative, an empty string is returned
 
 source: https://www.w3schools.com/jsref/jsref_substr.asp
+
+### Examples
+
+```js
+// return the middle one or two characters of a string, depending if the length of the word is odd or even
+function getMiddle(s){
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
+```
