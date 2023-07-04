@@ -8,12 +8,13 @@
 </head>
 <body>
   <script>
-    function getMiddle(s){
-      return s.length % 2 === 0 ? s.charAt(s.length / 2 -1) + s.charAt(s.length / 2) : s.charAt(s.length / 2)
-    }
+    function filter_list(list) {
+  return list.filter(element => {(typeof element === 'number') && element >= 0});
+}
 
 
-    console.log(getMiddle('test'))
+
+    console.log(filter_list([0, '12', 4, 6, 'lkj', 'l', 8, 'eee', 123]))
   </script>
 </body>
 </html>

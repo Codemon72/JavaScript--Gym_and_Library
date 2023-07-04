@@ -21,6 +21,13 @@ console.log(ages.filter(checkAdult));
 ```
 
 ```js
+// return array with only the elements of the type number
+function filter_list(list) {
+  return list.filter(element => typeof element === 'number');
+}
+```
+
+```js
 // find the first number with an odd occurrence in the array
 function findOdd(arr) {
   for (let i = 0; i < arr.length; i++) {
