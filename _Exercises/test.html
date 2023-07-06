@@ -8,13 +8,12 @@
 </head>
 <body>
   <script>
-    function filter_list(list) {
-  return list.filter(element => {(typeof element === 'number') && element >= 0});
-}
+let array1 = [1,2,3,4,5,6];
+let array2 = [0, ...array1, 'blib'];
+array2.push(true);
 
-
-
-    console.log(filter_list([0, '12', 4, 6, 'lkj', 'l', 8, 'eee', 123]))
+console.log(array1); // -> [1,2,3,4,5,6]
+console.log(array2); // -> [0,1,2,3,4,5,6,'blib',true]
   </script>
 </body>
 </html>

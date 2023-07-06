@@ -49,16 +49,30 @@ let exists = Object.keys(exampleObject).includes('example');
 ```
 
 #### Object Spreading
+pass the elements of an array/ object but NOT the structure of the array/ object.
+(Like you want to spread some butter on your steak but not the wrapping material.)
+
+Use cases: 
+- you just want a copy of another array/ object.
+- you want to copy all items of an array/ object into another one but only the elements NOT in form of an array/ object
 ```js
-// spread operator in arrays:
-let example1 = [1,2,3,4,5,6];
-let example2 = [...example1];
-example2.push(true);
+let array1 = [1,2,3,4,5,6];
+let array2 = [0, ...array1, 'blib'];
+array2.push(true);
 
-console.log(example1); // -> [1,2,3,4,5,6]
+console.log(array1); // -> [1,2,3,4,5,6]
+console.log(array2); // -> [0,1,2,3,4,5,6,'blib',true]
+```
+- pass elements into a function from an array
+```js
+function addThreeNumbers(x, y, z) {
+  console.log( x + y + z)
+}
+let threeNumbers = [4, 11, 2]
+addThreeNumbers(...threeNumbers)
+```
 
-// ----
-
+```js
 // Object Spreading: 
 const person = { name: 'Ansgar', age: 25 }
 const person2 = {}
