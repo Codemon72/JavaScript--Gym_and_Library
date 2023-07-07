@@ -146,7 +146,7 @@ In this [article](https://medium.com/javascript-in-plain-english/how-to-deep-cop
 deep dive: https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/
 
 simple example:
-```
+```js
 const [a, b] = [1, 2];   // the old method is var a=1, b=2;
 console.log(a);
 console.log(b);
@@ -159,7 +159,7 @@ console.log(b);
 Destructuring allows us to assign variables in a sentence-like form. 
 Here's a slightly more complicated example:
 
-```
+```js
 var [a,b]=[1,2]
 //Exchange the values of the two variables
 //classic method:
@@ -179,7 +179,7 @@ console.log(b);
 
 You can use the spread operator for destructuring like this:
 
-```
+```js
 var [a,...b]=[1,2,3,4,5];
 console.log(a);
 console.log(b);
@@ -191,42 +191,52 @@ console.log(b);
 **Please note**: the spread operator must be the last variable: [...a,b]=[1,2,3,4,5] does not work.
 a was assigned to the first element of the array, and b was initialized with the remaining elements in the array.
 
-#### Rest Parameter
+#### Rest Parameter vs Spread Operator `...`
+The three-dot syntax `...` is called the rest parameter when used in a function's parameter list to collect remaining arguments into an array. It is called the spread operator when used outside of a function's parameter list to expand an iterable into individual elements.
 
-**Javascript note**: If you see an ellipse ... in the argument list in a function declaration, it is not a spread operator, it is a structure called rest parameters. The rest parameter syntax allows us to represent an indefinite number of arguments as an array, like this: 
-
-```
-function plus(...num){
-  var rs = 0
-  for (x of num) rs += x;
-  return rs;
-}
-console.log(plus(1,2));
-console.log(plus(3,4,5));
-
-// output:
-// 3
-// 12
-```
+**Note**: If you see an ellipse `...` in the argument list in a function declaration, it is a structure called rest parameter. The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
 
 **Note**: The rest paramater must be the last argument in the function definition argument list.
 
-In the next example, we use a rest parameter to collect all the values passed to mul() after the first into an array. We then multiply each of them by the first parameter and return that array:
-
-```
-function mul(a,...b){
-  for (let i=0; i < b.length; i++) b[i]*=a;
-  return b;
+```js
+// Use rest to enclose the rest of specific user-supplied values into an array:
+function myBio(firstName, lastName, ...otherInfo) { 
+  return otherInfo;
 }
-console.log(mul(2,1,1,1));
-console.log(mul(2,1,2,3,4));
+// Invoke myBio function while passing five arguments to its parameters:
+myBio("Bill", "Mosley", "16", "Blocks", "Awesome");
 
-// output:
-// [2,2,2]
-// [2,4,6,8]
+// The invocation above will return:
+["16", "Blocks", "Awesome"]
 ```
 
-Spread separates the values of an iterable and is used inside function calls and Array literals, while rest gathers individual values into an array and is used for rest parameters and destructuring.
+```js
+// REST PARAMETER IN A DESTRUCTURING ASSIGNMENT
+// Define a destructuring array with two regular variables and one rest variable:
+const [firstName, lastName, ...otherInfo] = ["Jupp", "Schulz", "Techie", "RPG enthusiast", "word nerd"]
+
+// Invoke the otherInfo variable:
+console.log(otherInfo); 
+
+// The invocation above will return:
+["Techie", "RPG enthusiast", "word nerd"]
+```
+
+SPREAD separates the values of an iterable and is used inside function calls and Array literals, while rest gathers individual values into an array and is used for rest parameters and destructuring.
+```js
+// SPREAD AN ARRAYS ITEMS AS INDIVIDUAL ARGUMENTS
+// Define a function with three parameters:
+function myBio(firstName, lastName, project) { 
+  return `${firstName} ${lastName} runs ${project}`;
+}
+
+// Use spread to expand an array’s items into individual arguments:
+myBio(...["Alfons", "Zimmermann", "Word Nerd"]);
+
+// The invocation above will return:
+"Alfons Zimmermann runs Word Nerd"
+```
+___
 
 
 #### Type Operators
