@@ -22,9 +22,17 @@ source:
 - https://www.w3schools.com/jsref/jsref_join.asp
 
 
-**Example**
-
+**Examples**
+```js
+// reverse a string
+function reverseString(str){
+  return str.split('').reverse().join('');  
+}
+reverseString('hello')
+// output: 'olleh'
 ```
+
+```js
 const str = "My name is John";
 const words = str.split(" ");
 console.log("use split(): ", words);

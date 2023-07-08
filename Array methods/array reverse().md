@@ -14,3 +14,14 @@ Parameters: none
 **Return Value**:	An Array, representing the array after it has been reversed
 
 source: https://www.w3schools.com/jsref/jsref_reverse.asp
+
+### Examples
+
+```js
+// reverse a string
+function reverseString(str){
+  return str.split('').reverse().join('');  
+}
+reverseString('hello')
+// output: 'olleh'
+```
