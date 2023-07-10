@@ -25,3 +25,23 @@ Check if an array includes "Banana", starting the search at position 3:
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.includes("Banana", 3);   // Returns false
 ```
+
+Check if string is an isogram (word or phrase in which no letter is repeated)
+```js
+function isIsogram(str) {
+  let lowerCaseString = str.toLowerCase(); // Convert the input string to lowercase
+  let encounteredLetters = []; // Initialize an array to keep track of encountered letters
+
+  for (let i = 0; i < lowerCaseString.length; i++) {
+    const letter = lowerCaseString[i]; // Get the current letter
+
+    // Check if the letter has already been encountered
+    if (encounteredLetters.includes(letter)) {
+      return false; // If the letter is already encountered, it's not an isogram, so return false
+    } else {
+      encounteredLetters.push(letter); // Add the letter to the encounteredLetters array
+    }
+  }
+  return true; // If all letters are unique, it's an isogram, so return true
+}
+```

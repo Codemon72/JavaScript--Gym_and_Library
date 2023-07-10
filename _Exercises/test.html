@@ -8,12 +8,25 @@
 </head>
 <body>
   <script>
-let array1 = [1,2,3,4,5,6];
-let array2 = [0, ...array1, 'blib'];
-array2.push(true);
+function isIsogram(str) {
+  let lowerCaseString = str.toLowerCase(); // Convert the input string to lowercase
+  let encounteredLetters = []; // Initialize an array to keep track of encountered letters
 
-console.log(array1); // -> [1,2,3,4,5,6]
-console.log(array2); // -> [0,1,2,3,4,5,6,'blib',true]
+  for (let i = 0; i < lowerCaseString.length; i++) {
+    const letter = lowerCaseString[i]; // Get the current letter
+
+    // Check if the letter has already been encountered
+    if (encounteredLetters.includes(letter)) {
+      return false; // If the letter is already encountered, it's not an isogram, so return false
+    } else {
+      encounteredLetters.push(letter); // Add the letter to the encounteredLetters array
+    }
+  }
+  return true; // If all letters are unique, it's an isogram, so return true
+}
+
+
+console.log(isIsogram('öals3´üüdkfj')); 
   </script>
 </body>
 </html>
