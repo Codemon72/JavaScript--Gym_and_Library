@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // FizzBuzz Challenge
+
+    // function fizzBuzz(limit) {
+    //   for (let i = 1; i <= limit; i++) {
+    //     if (i % 3 === 0 && i % 5 === 0) {
+    //       console.log('FizzBuzz');
+    //     } else if (i % 3 === 0) {
+    //       console.log('Fizz');
+    //     } else if (i % 5 === 0) {
+    //       console.log('Buzz');
+    //     } else {
+    //       console.log(i);
+    //     }
+    //   }
+    // }
+
+    // Solution with String Concatenation
+    // function fizzBuzz(limit) {
+    //   let output = '';
+    //   for (let i = 1; i <= limit; i++) {
+    //     if (i % 3 === 0) {
+    //       output += 'Fizz';
+    //     }
+    //     if (i % 5 === 0) {
+    //       output += 'Buzz';
+    //     }
+    //     if (output === '') {
+    //       output = i;
+    //     }
+    //     console.log(output);
+    //     output = '';
+    //   }
+    // }
+
+    // Solution using a mapping object
+    function fizzBuzz(limit) {
+      const mappings = {
+        3: 'Fizz',
+        5: 'Buzz'
+      };
+      for (let i = 1; i <= limit; i++) {
+        let output = '';
+        for (let key in mappings) {
+          if (i % key === 0) {
+            output += mappings[key];
+          }
+        }
+        console.log(output || i);
+      }
+    }
+
+    fizzBuzz(55)
+  </script>
+</body>
+</html>
