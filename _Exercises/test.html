@@ -8,25 +8,28 @@
 </head>
 <body>
   <script>
-function isIsogram(str) {
-  let lowerCaseString = str.toLowerCase(); // Convert the input string to lowercase
-  let encounteredLetters = []; // Initialize an array to keep track of encountered letters
-
-  for (let i = 0; i < lowerCaseString.length; i++) {
-    const letter = lowerCaseString[i]; // Get the current letter
-
-    // Check if the letter has already been encountered
-    if (encounteredLetters.includes(letter)) {
-      return false; // If the letter is already encountered, it's not an isogram, so return false
-    } else {
-      encounteredLetters.push(letter); // Add the letter to the encounteredLetters array
-    }
+function XO(str) {
+  const strLowerCase = str.toLowerCase(); // convert the input string to lowercase
+  const encounteredXOs = [0, 0]
+  for (let i = 0; i < str.length; i ++){
+    if (strLowerCase[i] === 'x'){encounteredXOs[0] += 1}
+    else if (strLowerCase[i] === 'o'){encounteredXOs[1] += 1}
   }
-  return true; // If all letters are unique, it's an isogram, so return true
+  return encounteredXOs[0] === encounteredXOs[1]
 }
 
 
-console.log(isIsogram('öals3´üüdkfj')); 
+// console.log('1:', XO('xoo')); 
+// console.log('1:', XO('xo')); 
+// console.log('2:', XO('xxoo')); 
+// console.log('3:', XO('xxxoo')); 
+// console.log('4:', XO('zzz')); 
+// console.log('5:', XO('oo')); 
+console.log(XO('xo'));
+console.log(XO("xxOo"));
+console.log(XO("xxxm"));
+console.log(XO("Oo"));
+console.log(XO("ooom"));
   </script>
 </body>
 </html>
