@@ -15,4 +15,14 @@ The index of the last character in a string is string.length-1, the second last 
 let str = "HELLO WORLD";
 str.charAt(0)    // Returns "H"
 ``` 
+
+Uppercase every word
+```js
+function uppercaseEveryWord(string) {
+  return string.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+}
+console.log(
+  uppercaseEveryWord("How can mirrors be real if our eyes aren't real.")
+)
+```
 - more complex example in /Exercises/6_vowelCode.js

@@ -28,3 +28,13 @@ const removeChar = (str) =>  {
   return str.slice(1, -1)
 };
 ```
+
+Uppercase every word
+```js
+function uppercaseEveryWord(string) {
+  return string.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+}
+console.log(
+  uppercaseEveryWord("How can mirrors be real if our eyes aren't real.")
+)
+```

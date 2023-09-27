@@ -8,31 +8,12 @@
   </head>
   <body>
     <script>
-      // Task: convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
-
-      function duplicateEncode(word) {
-        // Convert the input string to lowercase to make the encoding case-insensitive.
-        const characterArray = word.toLowerCase().split('')
-        let newString = ''
-
-        // Calculate the occurrences of each character and store them in an object.
-        const occurrences = characterArray.reduce((acc, element) => {
-          // If the character exists in the accumulator object, increment its count by 1.
-          // Otherwise, initialize its count to 1.
-          acc[element] = (acc[element] || 0) + 1
-          return acc
-        }, {})
-        // console.log(occurrences)
-
-        // Encode the string based on character occurrences.
-        return characterArray.reduce((newString, element) => {
-          // If the character occurred more than once, add ')' to the new string.
-          // Otherwise, add '('.
-          return newString + (occurrences[element] > 1 ? ')' : '(')
-        }, '')
-      }
-
-      console.log(duplicateEncode('aJAdfghj'))
+function uppercaseEveryWord(string) {
+  return string.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+}
+console.log(
+  uppercaseEveryWord("How can mirrors be real if our eyes aren't real.")
+)
     </script>
   </body>
 </html>
