@@ -8,12 +8,27 @@
   </head>
   <body>
     <script>
-function uppercaseEveryWord(string) {
-  return string.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+function isValidWalk(walk) {
+  // count all letters
+  const letterCounts = walk.reduce((acc, letter) => {
+    if (acc.hasOwnProperty(letter)) {
+      acc[letter]++;
+    } else {
+      acc[letter] = 1;
+    }
+    return acc; 
+  }, {});
+
+  // if number of n and s are equal && e and w are equal return true
+  // else return false
+  if (walk.length == 10 && letterCounts['n'] === letterCounts['s'] && letterCounts['e'] === letterCounts['w']) {
+    return true;
+  } else {
+    return false;
+  }
 }
-console.log(
-  uppercaseEveryWord("How can mirrors be real if our eyes aren't real.")
-)
+console.log('true: ', isValidWalk(['n','s','n','s','n','s','n','s','n','s']))
+console.log('false: ', isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']))
     </script>
   </body>
 </html>

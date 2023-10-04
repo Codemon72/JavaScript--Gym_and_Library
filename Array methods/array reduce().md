@@ -69,7 +69,6 @@ function duplicateEncode(word) {
     acc[element] = (acc[element] || 0) + 1
     return acc
   }, {})
-  // console.log(occurrences)
   // Encode the string based on character occurrences.
   return characterArray.reduce((newString, element) => {
     // If the character occurred more than once, add ')' to the new string.
