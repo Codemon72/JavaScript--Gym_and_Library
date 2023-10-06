@@ -11,8 +11,11 @@
       const url = './assets/example_text.txt'
 
       function wordCounter(text) {
-        // Step 1: Convert the object into an array of key-value pairs
-        const wordCounts = text.split(/\s+/).reduce((acc, word) => {
+        // Step 1: Split the text into words and remove punctuation
+        const words = text.match(/\b[\wäüöß'-]+\b/g);
+
+        // Step 2: Count the occurrences of each word
+        const wordCounts = words.reduce((acc, word) => {
           if (acc.hasOwnProperty(word)) {
             acc[word]++
           } else {
@@ -21,12 +24,12 @@
           return acc
         }, {})
 
-        // Step 2: Sort the array based on the values
+        // Step 3: Sort the words by frequency of occurrence
         const sortedWordCounts = Object.entries(wordCounts).sort(
           (a, b) => b[1] - a[1]
-        ) // Sort in descending order of values
+        )
 
-        // Step 3: Create a new object from the sorted array
+        // Step 4: Create a new object from the sorted array
         const sortedWordCountsObject = Object.fromEntries(sortedWordCounts)
 
         return sortedWordCountsObject // Return the sorted word counts object

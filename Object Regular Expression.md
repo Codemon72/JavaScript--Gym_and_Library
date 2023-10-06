@@ -49,10 +49,12 @@ Expression	Description
 `.` The . metacharacter is used to find a single character, except newline or other line terminators.
     - `exampleString.replace(/./g, '#')` - replaces all characters in a string with a hashtag
     - `const string = "That's hot!"; const patt1 = /h.t/g;` - will return 'hat' and 'hot'
-`\d` - Find a digit
-`\D` - Find a non-digit character
-`\s` - Find a whitespace character
-`\S` - Find a non-whitespace character
+`\d` - a digit
+`\D` - a non-digit character
+`\s` - a whitespace character 
+        - includes spaces, tabs and line breaks
+        - shorthand for [ \t\n\r\f\v] explicitly, but it's more concise
+`\S` - a non-whitespace character
 `\n` - end of line (in Unix and Unix-like systems - \r means nothing special)
 `\r` - carriage return (end of line on old Mac systems (pre-OS X))
         - deep dive of difference between \n and \r: https://stackoverflow.com/questions/1761051/difference-between-n-and-r#answer-1761086
@@ -60,7 +62,7 @@ Expression	Description
 
 ### Quantifiers
 `*` - 0 or more
-`+` - 1 or more
+`+` - 1 or more of the before
 
 Metacharacters and Quantifiers: https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 
