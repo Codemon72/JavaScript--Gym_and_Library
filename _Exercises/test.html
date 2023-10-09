@@ -8,27 +8,13 @@
   </head>
   <body>
     <script>
-function isValidWalk(walk) {
-  // count all letters
-  const letterCounts = walk.reduce((acc, letter) => {
-    if (acc.hasOwnProperty(letter)) {
-      acc[letter]++;
-    } else {
-      acc[letter] = 1;
-    }
-    return acc; 
-  }, {});
+const numbers = [50, 10, 10];
 
-  // if number of n and s are equal && e and w are equal return true
-  // else return false
-  if (walk.length == 10 && letterCounts['n'] === letterCounts['s'] && letterCounts['e'] === letterCounts['w']) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log('true: ', isValidWalk(['n','s','n','s','n','s','n','s','n','s']))
-console.log('false: ', isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']))
+console.log(numbers.reduce((acc, el) => acc - el)); // logs: 30
+
+console.log(numbers.reduce((acc, el) => acc - el, 75)); // logs: 5
+
+console.log(numbers.reduce((acc, el) => acc + el, '')); // logs: '501010'
     </script>
   </body>
 </html>

@@ -29,11 +29,11 @@ Examples:
 ```js
 const numbers = [50, 10, 10];
 
-console.log(numbers.reduce(a, b) => a - b); // logs: 20
+console.log(numbers.reduce((acc, el) => acc - el)); // logs: 30
 
-console.log(numbers.reduce(a, b) => a - b, 75); // logs: 5
+console.log(numbers.reduce((acc, el) => acc - el, 75)); // logs: 5
 
-console.log(numbers.reduce(a, b) => a - b, ''); // logs: '501010'
+console.log(numbers.reduce((acc, el) => acc + el, '')); // logs: '501010'
 ```
 
 Calculated average:
