@@ -1,5 +1,9 @@
 The setTimeout() method calls a function after a number of milliseconds.
 
+
+### Syntax
+`setTimeout(function, milliseconds, param1, param2, ...)`
+
 ### Parameters
 - function - Required. The function to execute.
 - milliseconds - Optional. Number of milliseconds to wait before executing.

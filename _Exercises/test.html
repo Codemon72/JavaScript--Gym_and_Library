@@ -8,13 +8,23 @@
   </head>
   <body>
     <script>
-const numbers = [50, 10, 10];
+function queueTime(customers, n) {
+  let timePerTill = []
+  for (let i = 0; i < n; i++) {
+    timePerTill[i] = 0
+  }
+  for (let j = 0; j < customers.length; j++) {
+    // add customers[j] to the smallest element in the array
+    timePerTill.sort((a, b) => a - b)
+    timePerTill[0] += customers[j]
+  }
+  return Math.max(...timePerTill)
+}
 
-console.log(numbers.reduce((acc, el) => acc - el)); // logs: 30
-
-console.log(numbers.reduce((acc, el) => acc - el, 75)); // logs: 5
-
-console.log(numbers.reduce((acc, el) => acc + el, '')); // logs: '501010'
+      console.log('5: ', queueTime([1, 2, 3, 4, 5], 100))
+      console.log('9: ', queueTime([2, 2, 3, 3, 4, 4], 2))
+      console.log('10: ', queueTime([10, 2, 3, 3], 2))
+      console.log('12: ', queueTime([5, 3, 4], 1))
     </script>
   </body>
 </html>
