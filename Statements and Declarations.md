@@ -72,9 +72,7 @@ Specifies the value to be returned by a function.
 Declares a class.
 
 
-# Iterations
-
-### Loops
+## Iterations & Loops
 
 JavaScript supports different kinds of loops:
 

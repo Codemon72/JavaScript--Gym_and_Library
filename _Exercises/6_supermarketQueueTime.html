@@ -2,29 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
+    <p>
+      There is a queue for the self-checkout tills at the supermarket. Your task
+      is write a function to calculate the total time required for all the
+      customers to check out!
+    </p>
+
+    <h4>input</h4>
+
+    <p>input</p>
+    <strong>customers: </strong>
+    <span
+      >an array of positive integers representing the queue. Each integer
+      represents a customer, and its value is the amount of time they require to
+      check out.</span
+    >
+
+    <br />
+    <strong>n: </strong>
+    <span>a positive integer, the number of checkout tills. output</span>
+
+    <p>The function should return an integer, the total time required.</p>
+
     <script>
-      // let timePerTill = []
-      // for (let i = 0; i < n; i++) {
-      //   timePerTill[i] = 0
-      // }
-      // for (let j = 0; j < customers.length; j++) {
-      //   // add customers[j] to the smallest element in the array
-      //   timePerTill.sort((a, b) => a - b)
-      //   timePerTill[0] += customers[j]
-      // }
-      // return Math.max(...timePerTill)
       function queueTime(customers, n) {
         const timePerTill = new Array(n).fill(0)
         for (let time of customers) {
           let indexMin = timePerTill.indexOf(Math.min(...timePerTill))
           timePerTill[indexMin] += time
         }
-        return timePerTill
+        return Math.max(...timePerTill)
       }
 
       console.log('5: ', queueTime([1, 2, 3, 4, 5], 100))
