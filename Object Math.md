@@ -31,6 +31,21 @@ Returns the positive square root of x.
 `Math.abs(x)`
 Returns the absolute value of a number. (Always positive).
 
+`Math.PI`
+Represents the mathematical constant π (pi).
+
+`Math.min(x, y, ...args)`
+Returns the smallest value among the given numbers or array elements. (Watch out: The **elements** of an array, not an array. Use the spread operator.)
+
+`Math.max(x, y, ...args)`
+Returns the largest value among the given numbers or array elements. (Watch out: The **elements** of an array, not an array. Use the spread operator.)
+
+Example: 
+```js
+const numbers = [5, 25, 4];
+console.log(Math.max(...numbers)) // 25
+console.log(Math.min(...numbers)) // 4
+```
 
 sources: 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
