@@ -15,12 +15,21 @@ In JS regular expressions are objects.
 `/pattern/modifiers;`
 
 ### Using String Methods
-In JavaScript, regular expressions are often used with the these string methods: 
+In JavaScript, regular expressions are often used with these string methods: 
 
 - The `match()` method searches a string for a match against a regular expression, and returns the matches, as an Array object.
-- The `replace()` method returns a modified string where the pattern is replaced.
 - The `search()` method uses an expression to search for a match, and returns the position of the match.
-
+- The `replace()` method returns a modified string where the pattern is replaced.
+  - Description: Searches a string for a specified value or regular expression and replaces it with a specified replacement string.
+- Syntax: `string.replace(regexp|substr, newSubstr|function)`
+- Example:
+    ```js
+    // put an empty space in front of uppercase characters
+    function deCamelCase(string) {
+      return string.replace(/([A-Z])/g, ' $1');
+    }
+    console.log(deCamelCase('HelloWorld')) // -> 'Hello World'
+    ```
 
 ### Character Classes
 `s` - white space

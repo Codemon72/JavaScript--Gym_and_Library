@@ -8,29 +8,22 @@
   </head>
   <body>
     <script>
-      // let timePerTill = []
-      // for (let i = 0; i < n; i++) {
-      //   timePerTill[i] = 0
-      // }
-      // for (let j = 0; j < customers.length; j++) {
-      //   // add customers[j] to the smallest element in the array
-      //   timePerTill.sort((a, b) => a - b)
-      //   timePerTill[0] += customers[j]
-      // }
-      // return Math.max(...timePerTill)
-      function queueTime(customers, n) {
-        const timePerTill = new Array(n).fill(0)
-        for (let time of customers) {
-          let indexMin = timePerTill.indexOf(Math.min(...timePerTill))
-          timePerTill[indexMin] += time
-        }
-        return timePerTill
+      function solution(string) {
+        
+        // const arrayOfString = string.split('')
+        // let resultString = ''
+        // for (let i = 0; i < arrayOfString.length; i++) {
+          // if (arrayOfString[i] === arrayOfString[i].toLowerCase()) {
+            // resultString += arrayOfString[i]
+          // } else if (arrayOfString[i] === arrayOfString[i].toUpperCase()) {
+            // resultString += ' ' + arrayOfString[i]
+          // }
+        // }
+        // return resultString
       }
-
-      console.log('5: ', queueTime([1, 2, 3, 4, 5], 100))
-      console.log('9: ', queueTime([2, 2, 3, 3, 4, 4], 2))
-      console.log('10: ', queueTime([10, 2, 3, 3], 2))
-      console.log('12: ', queueTime([5, 3, 4], 1))
+      console.log(solution('camelCasing'))
+      console.log(solution('identifier'))
+      console.log(solution(''))
     </script>
   </body>
 </html>
